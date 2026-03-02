@@ -1,0 +1,1454 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consultores PB — Soluciones Técnicas Industriales | Panamá</title>
+  <meta name="description" content="Consultores PB: Asesoría técnica y soluciones industriales en Panamá. Maquinaria, herramientas y consumibles especializados para el sector industrial.">
+  <meta name="keywords" content="consultores industriales, asesoría técnica, maquinaria industrial, herramientas industriales, consumibles industriales, Panamá">
+  <meta name="author" content="Consultores PB">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#F6F3EE">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Consultores PB — Soluciones Técnicas Industriales">
+  <meta property="og:description" content="Asesoría técnica y soluciones industriales confiables en Panamá.">
+  <meta property="og:locale" content="es_PA">
+  <link rel="canonical" href="https://consultorespb.com/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%230F1923' stroke='%23D4952A' stroke-width='2'/%3E%3Ctext x='32' y='38' text-anchor='middle' fill='%23D4952A' font-size='20' font-weight='bold'%3EPB%3C/text%3E%3C/svg%3E">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --navy: #0F1923;
+      --navy-90: rgba(15, 25, 35, 0.9);
+      --navy-60: rgba(15, 25, 35, 0.6);
+      --navy-30: rgba(15, 25, 35, 0.3);
+      --navy-10: rgba(15, 25, 35, 0.08);
+      --amber: #D4952A;
+      --amber-light: #E4A83D;
+      --amber-glow: rgba(212, 149, 42, 0.15);
+      --amber-soft: rgba(212, 149, 42, 0.08);
+      --cream: #F6F3EE;
+      --cream-dark: #EDE8E0;
+      --warm-white: #FDFCFA;
+      --warm-gray: #8A8580;
+      --warm-gray-light: #B5B0A8;
+      --border: rgba(15, 25, 35, 0.08);
+      --shadow-sm: 0 1px 3px rgba(15, 25, 35, 0.04), 0 1px 2px rgba(15, 25, 35, 0.03);
+      --shadow-md: 0 4px 20px rgba(15, 25, 35, 0.06), 0 2px 8px rgba(15, 25, 35, 0.04);
+      --shadow-lg: 0 12px 40px rgba(15, 25, 35, 0.08), 0 4px 16px rgba(15, 25, 35, 0.04);
+      --shadow-xl: 0 20px 60px rgba(15, 25, 35, 0.1), 0 8px 24px rgba(15, 25, 35, 0.06);
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+      --font-display: 'Fraunces', Georgia, serif;
+      --font-body: 'Manrope', system-ui, sans-serif;
+      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--cream);
+      color: var(--navy);
+      line-height: 1.7;
+      font-weight: 400;
+      overflow-x: hidden;
+    }
+
+    /* ── Grain overlay ── */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.025;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+
+    /* ── Reveal animations ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+
+    /* ── Container ── */
+    .container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 clamp(20px, 5vw, 48px);
+    }
+
+    /* ── Section label ── */
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 20px;
+    }
+    .section-label::before {
+      content: '';
+      display: block;
+      width: 28px;
+      height: 1.5px;
+      background: var(--amber);
+      border-radius: 2px;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 500;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      color: var(--navy);
+      margin-bottom: 16px;
+    }
+
+    .section-subtitle {
+      font-size: 1.05rem;
+      color: var(--navy-60);
+      max-width: 560px;
+      line-height: 1.7;
+      font-weight: 400;
+    }
+
+    /* ━━━━━━━━━━ NAVIGATION ━━━━━━━━━━ */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 0 clamp(20px, 5vw, 48px);
+      transition: all 0.4s var(--ease-out);
+    }
+    .nav.scrolled {
+      background: rgba(246, 243, 238, 0.85);
+      backdrop-filter: blur(20px) saturate(1.2);
+      -webkit-backdrop-filter: blur(20px) saturate(1.2);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 80px;
+      transition: height 0.4s var(--ease-out);
+    }
+    .nav.scrolled .nav-inner { height: 64px; }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+    }
+    .nav-logo img {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      transition: transform 0.3s var(--ease-out);
+    }
+    .nav.scrolled .nav-logo img { width: 38px; height: 38px; }
+    .nav-logo:hover img { transform: scale(1.05); }
+    .nav-logo-text {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--navy);
+      letter-spacing: -0.01em;
+    }
+    .nav-logo-text span { color: var(--amber); }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--navy-60);
+      text-decoration: none;
+      letter-spacing: 0.01em;
+      transition: color 0.3s;
+      position: relative;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 1.5px;
+      background: var(--amber);
+      border-radius: 2px;
+      transition: width 0.3s var(--ease-out);
+    }
+    .nav-links a:hover { color: var(--navy); }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 24px;
+      background: var(--navy);
+      color: var(--cream) !important;
+      border-radius: 100px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      text-decoration: none !important;
+      transition: all 0.3s var(--ease-out);
+      border: none;
+      cursor: pointer;
+    }
+    .nav-cta::after { display: none !important; }
+    .nav-cta:hover {
+      background: var(--amber);
+      color: var(--navy) !important;
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-md);
+    }
+
+    /* Mobile menu */
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+    }
+    .nav-toggle span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--navy);
+      border-radius: 2px;
+      transition: all 0.3s var(--ease-out);
+    }
+    .nav-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .nav-toggle.active span:nth-child(2) { opacity: 0; }
+    .nav-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+    /* ━━━━━━━━━━ HERO ━━━━━━━━━━ */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -200px;
+      right: -200px;
+      width: 700px;
+      height: 700px;
+      background: radial-gradient(circle, var(--amber-soft) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      position: relative;
+    }
+    .hero-content { position: relative; z-index: 2; }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--navy-60);
+      margin-bottom: 28px;
+      letter-spacing: 0.02em;
+    }
+    .hero-badge-dot {
+      width: 7px;
+      height: 7px;
+      background: var(--amber);
+      border-radius: 50%;
+      animation: pulse-dot 2s ease infinite;
+    }
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(1.3); }
+    }
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 5.5vw, 4rem);
+      font-weight: 500;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      color: var(--navy);
+      margin-bottom: 24px;
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--amber);
+      font-weight: 400;
+    }
+    .hero-text {
+      font-size: 1.1rem;
+      color: var(--navy-60);
+      line-height: 1.7;
+      max-width: 480px;
+      margin-bottom: 40px;
+    }
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 32px;
+      background: var(--amber);
+      color: var(--navy);
+      border-radius: 100px;
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s var(--ease-out);
+      letter-spacing: 0.01em;
+    }
+    .btn-primary:hover {
+      background: var(--amber-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(212, 149, 42, 0.3);
+    }
+    .btn-primary svg { transition: transform 0.3s var(--ease-out); }
+    .btn-primary:hover svg { transform: translateX(3px); }
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 28px;
+      background: transparent;
+      color: var(--navy);
+      border: 1.5px solid var(--navy-10);
+      border-radius: 100px;
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      font-weight: 500;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.3s var(--ease-out);
+    }
+    .btn-secondary:hover {
+      border-color: var(--navy-30);
+      background: var(--warm-white);
+    }
+
+    /* Hero image */
+    .hero-visual {
+      position: relative;
+      height: 560px;
+    }
+    .hero-img-main {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-xl);
+    }
+    .hero-img-float {
+      position: absolute;
+      bottom: -30px;
+      left: -40px;
+      width: 200px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-lg);
+      border: 4px solid var(--cream);
+    }
+    .hero-stat {
+      position: absolute;
+      top: 30px;
+      right: -20px;
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 18px 22px;
+      box-shadow: var(--shadow-lg);
+    }
+    .hero-stat-number {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: var(--amber);
+      line-height: 1;
+    }
+    .hero-stat-label {
+      font-size: 0.75rem;
+      color: var(--navy-60);
+      margin-top: 4px;
+      font-weight: 500;
+    }
+
+    /* ━━━━━━━━━━ COMPANY ━━━━━━━━━━ */
+    .company {
+      padding: 120px 0;
+      position: relative;
+    }
+    .company-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .company-description {
+      font-size: 1.15rem;
+      color: var(--navy-60);
+      line-height: 1.8;
+      margin-top: 16px;
+    }
+    .company-values {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+    .value-card {
+      padding: 32px;
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      transition: all 0.4s var(--ease-out);
+      position: relative;
+      overflow: hidden;
+    }
+    .value-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 3px;
+      height: 100%;
+      background: var(--amber);
+      border-radius: 0 2px 2px 0;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .value-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateX(4px);
+    }
+    .value-card:hover::before { opacity: 1; }
+    .value-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .value-icon {
+      width: 36px;
+      height: 36px;
+      background: var(--amber-glow);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .value-icon svg { width: 18px; height: 18px; color: var(--amber); }
+    .value-card p {
+      font-size: 0.95rem;
+      color: var(--navy-60);
+      line-height: 1.7;
+      padding-left: 48px;
+    }
+
+    /* ━━━━━━━━━━ SERVICES ━━━━━━━━━━ */
+    .services {
+      padding: 100px 0 120px;
+      background: var(--warm-white);
+      position: relative;
+    }
+    .services::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border), transparent);
+    }
+    .services-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+    .services-header .section-subtitle {
+      margin: 0 auto;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .service-card {
+      padding: 36px 30px;
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      transition: all 0.4s var(--ease-out);
+      position: relative;
+      cursor: default;
+    }
+    .service-card:hover {
+      background: var(--warm-white);
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-4px);
+      border-color: rgba(212, 149, 42, 0.2);
+    }
+    .service-icon {
+      width: 52px;
+      height: 52px;
+      background: var(--navy);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 22px;
+      transition: all 0.4s var(--ease-out);
+    }
+    .service-card:hover .service-icon {
+      background: var(--amber);
+      border-radius: 14px;
+    }
+    .service-icon svg { width: 24px; height: 24px; color: var(--cream); }
+    .service-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+    .service-card p {
+      font-size: 0.9rem;
+      color: var(--navy-60);
+      line-height: 1.65;
+    }
+    .service-number {
+      position: absolute;
+      top: 28px;
+      right: 28px;
+      font-family: var(--font-display);
+      font-size: 0.8rem;
+      font-weight: 300;
+      color: var(--warm-gray-light);
+      letter-spacing: 0.02em;
+    }
+
+    /* ━━━━━━━━━━ SECTORS ━━━━━━━━━━ */
+    .sectors {
+      padding: 120px 0;
+      position: relative;
+    }
+    .sectors-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .sectors-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .sector-item {
+      padding: 28px 24px;
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      transition: all 0.3s var(--ease-out);
+    }
+    .sector-item:hover {
+      border-color: var(--amber);
+      box-shadow: var(--shadow-sm);
+      transform: translateY(-2px);
+    }
+    .sector-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--amber-glow);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .sector-icon svg { width: 22px; height: 22px; color: var(--amber); }
+    .sector-item h4 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--navy);
+    }
+    .sector-item p {
+      font-size: 0.8rem;
+      color: var(--warm-gray);
+      margin-top: 2px;
+    }
+
+    /* ━━━━━━━━━━ PRODUCTS ━━━━━━━━━━ */
+    .products {
+      padding: 100px 0 120px;
+      background: var(--navy);
+      color: var(--cream);
+      position: relative;
+      overflow: hidden;
+    }
+    .products::before {
+      content: '';
+      position: absolute;
+      top: -300px;
+      left: -200px;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(212, 149, 42, 0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .products .section-title { color: var(--cream); }
+    .products .section-subtitle { color: rgba(246, 243, 238, 0.5); }
+    .products-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+    .products-header .section-subtitle { margin: 0 auto; }
+    .products-categories {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .product-category {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-lg);
+      padding: 36px 30px;
+      transition: all 0.4s var(--ease-out);
+    }
+    .product-category:hover {
+      background: rgba(255, 255, 255, 0.07);
+      border-color: rgba(212, 149, 42, 0.3);
+      transform: translateY(-4px);
+    }
+    .product-cat-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 24px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .product-cat-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--amber);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .product-cat-icon svg { width: 22px; height: 22px; color: var(--navy); }
+    .product-cat-header h3 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--cream);
+    }
+    .product-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .product-list li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.9rem;
+      color: rgba(246, 243, 238, 0.65);
+      transition: color 0.3s;
+    }
+    .product-list li:hover { color: var(--cream); }
+    .product-list li::before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      background: var(--amber);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* ━━━━━━━━━━ CONTACT ━━━━━━━━━━ */
+    .contact {
+      padding: 120px 0;
+      position: relative;
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 60px;
+      align-items: start;
+    }
+    .contact-info-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 32px;
+    }
+    .contact-info-card {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding: 22px 24px;
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      color: var(--navy);
+      transition: all 0.3s var(--ease-out);
+    }
+    .contact-info-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateX(4px);
+      border-color: var(--amber);
+    }
+    .contact-info-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--amber-glow);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .contact-info-icon svg { width: 22px; height: 22px; color: var(--amber); }
+    .contact-info-label {
+      font-size: 0.78rem;
+      color: var(--warm-gray);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .contact-info-value {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-top: 2px;
+    }
+
+    /* Form */
+    .contact-form {
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 44px;
+      box-shadow: var(--shadow-md);
+    }
+    .contact-form h3 {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .contact-form > p {
+      font-size: 0.9rem;
+      color: var(--warm-gray);
+      margin-bottom: 28px;
+    }
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+    .form-group.full { grid-column: 1 / -1; }
+    .form-group label {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--navy);
+      letter-spacing: 0.01em;
+    }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      padding: 13px 16px;
+      background: var(--cream);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      color: var(--navy);
+      transition: all 0.3s;
+      outline: none;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color: var(--amber);
+      background: var(--warm-white);
+      box-shadow: 0 0 0 3px var(--amber-soft);
+    }
+    .form-group textarea { resize: vertical; min-height: 110px; }
+    .form-submit {
+      margin-top: 20px;
+      width: 100%;
+      padding: 16px;
+      background: var(--navy);
+      color: var(--cream);
+      border: none;
+      border-radius: var(--radius-sm);
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s var(--ease-out);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .form-submit:hover {
+      background: var(--amber);
+      color: var(--navy);
+      transform: translateY(-1px);
+    }
+
+    /* ━━━━━━━━━━ FOOTER ━━━━━━━━━━ */
+    .footer {
+      background: var(--navy);
+      color: rgba(246, 243, 238, 0.5);
+      padding: 64px 0 0;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .footer-brand p {
+      font-size: 0.9rem;
+      line-height: 1.7;
+      margin-top: 16px;
+      max-width: 300px;
+    }
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .footer-logo img { width: 40px; height: 40px; border-radius: 50%; }
+    .footer-logo-text {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--cream);
+    }
+    .footer-logo-text span { color: var(--amber); }
+    .footer h4 {
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--cream);
+      margin-bottom: 20px;
+    }
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .footer-links a {
+      color: rgba(246, 243, 238, 0.45);
+      text-decoration: none;
+      font-size: 0.88rem;
+      transition: color 0.3s;
+    }
+    .footer-links a:hover { color: var(--amber); }
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 0;
+      font-size: 0.82rem;
+    }
+
+    /* ━━━━━━━━━━ WHATSAPP FLOAT ━━━━━━━━━━ */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 900;
+      width: 60px;
+      height: 60px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 24px rgba(37, 211, 102, 0.35);
+      text-decoration: none;
+      transition: all 0.3s var(--ease-spring);
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 30px rgba(37, 211, 102, 0.5);
+    }
+    .whatsapp-float svg { width: 30px; height: 30px; fill: white; }
+    .whatsapp-pulse {
+      position: absolute;
+      inset: -6px;
+      border-radius: 50%;
+      border: 2px solid #25D366;
+      animation: wa-pulse 2s ease infinite;
+    }
+    @keyframes wa-pulse {
+      0% { transform: scale(1); opacity: 0.5; }
+      100% { transform: scale(1.4); opacity: 0; }
+    }
+
+    /* ━━━━━━━━━━ RESPONSIVE ━━━━━━━━━━ */
+    @media (max-width: 1024px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+      .hero-visual { height: 400px; order: -1; }
+      .hero-img-float { display: none; }
+      .hero-stat { top: 20px; right: 10px; }
+      .company-grid { grid-template-columns: 1fr; gap: 48px; }
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      .sectors-layout { grid-template-columns: 1fr; gap: 40px; }
+      .products-categories { grid-template-columns: 1fr 1fr; }
+      .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(246, 243, 238, 0.97);
+        backdrop-filter: blur(20px);
+        padding: 24px;
+        gap: 16px;
+        border-bottom: 1px solid var(--border);
+      }
+      .nav-toggle { display: flex; }
+      .hero { min-height: auto; padding: 120px 0 60px; }
+      .hero-visual { height: 300px; }
+      .services-grid { grid-template-columns: 1fr; }
+      .sectors-grid { grid-template-columns: 1fr; }
+      .products-categories { grid-template-columns: 1fr; }
+      .form-grid { grid-template-columns: 1fr; }
+      .contact-form { padding: 28px; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 { font-size: 2rem; }
+      .hero-actions { flex-direction: column; width: 100%; }
+      .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
+      .section-title { font-size: 1.75rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ NAVIGATION ═══ -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <img src="requirements/Logo Consultores PB-01.png" alt="Consultores PB">
+        <span class="nav-logo-text">Consultores <span>PB</span></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#empresa">La Empresa</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#sectores">Sectores</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#contacto" class="nav-cta">
+          Contáctenos
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge reveal">
+            <span class="hero-badge-dot"></span>
+            Asesoría técnica industrial en Panamá
+          </div>
+          <h1 class="reveal reveal-delay-1">Soluciones técnicas para el <em>sector industrial</em></h1>
+          <p class="hero-text reveal reveal-delay-2">Apoyamos a empresas industriales en la selección, adquisición y suministro de maquinaria, herramientas y consumibles especializados con respaldo profesional.</p>
+          <div class="hero-actions reveal reveal-delay-3">
+            <a href="#contacto" class="btn-primary">
+              Solicitar Asesoría
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#servicios" class="btn-secondary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+              Nuestros Servicios
+            </a>
+          </div>
+        </div>
+        <div class="hero-visual reveal reveal-delay-2">
+          <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80" alt="Industria" class="hero-img-main">
+          <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=400&q=80" alt="Maquinaria" class="hero-img-float">
+          <div class="hero-stat">
+            <div class="hero-stat-number">5+</div>
+            <div class="hero-stat-label">Sectores industriales</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ LA EMPRESA ═══ -->
+  <section class="company" id="empresa">
+    <div class="container">
+      <div class="company-grid">
+        <div>
+          <div class="section-label reveal">Sobre Nosotros</div>
+          <h2 class="section-title reveal reveal-delay-1">Aliados estratégicos del sector industrial</h2>
+          <p class="company-description reveal reveal-delay-2">Consultores PB es una empresa dedicada a brindar asesoría técnica y soluciones para el sector industrial, apoyando a empresas en la selección, adquisición y suministro de maquinaria, herramientas y consumibles especializados. Nuestro objetivo es facilitar a las empresas industriales el acceso a equipos y soluciones técnicas confiables que contribuyan a mejorar la eficiencia, productividad y continuidad de sus operaciones.</p>
+        </div>
+        <div class="company-values">
+          <div class="value-card reveal">
+            <h3>
+              <span class="value-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg>
+              </span>
+              Misión
+            </h3>
+            <p>Brindar asesoría técnica y soluciones industriales confiables, ayudando a las empresas a seleccionar y adquirir maquinaria, herramientas y consumibles adecuados para sus procesos, con respaldo profesional y enfoque en la eficiencia operativa.</p>
+          </div>
+          <div class="value-card reveal reveal-delay-1">
+            <h3>
+              <span class="value-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+              </span>
+              Visión
+            </h3>
+            <p>Ser un aliado estratégico reconocido en el sector industrial, destacándonos por ofrecer soluciones técnicas confiables, atención personalizada y apoyo en la adquisición de equipos y suministros especializados.</p>
+          </div>
+          <div class="value-card reveal reveal-delay-2">
+            <h3>
+              <span class="value-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+              </span>
+              Enfoque
+            </h3>
+            <p>Apoyar a empresas industriales en la identificación de necesidades técnicas y la selección de soluciones adecuadas, facilitando el acceso a maquinaria, herramientas y consumibles especializados a través de proveedores confiables.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SERVICIOS ═══ -->
+  <section class="services" id="servicios">
+    <div class="container">
+      <div class="services-header">
+        <div class="section-label reveal">Nuestros Servicios</div>
+        <h2 class="section-title reveal reveal-delay-1">Soluciones integrales para su operación</h2>
+        <p class="section-subtitle reveal reveal-delay-2">Ofrecemos un portafolio completo de servicios orientados a optimizar y respaldar la operación industrial de su empresa.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <span class="service-number">01</span>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <h3>Asesoría Técnica Industrial</h3>
+          <p>Orientación profesional para la selección de equipos y soluciones técnicas adecuadas a cada proceso industrial.</p>
+        </div>
+        <div class="service-card reveal reveal-delay-1">
+          <span class="service-number">02</span>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="6" width="22" height="12" rx="2"/><path d="M1 10h22"/></svg>
+          </div>
+          <h3>Venta y Suministro de Maquinaria</h3>
+          <p>Acceso a maquinaria especializada de proveedores confiables para satisfacer las demandas de su operación.</p>
+        </div>
+        <div class="service-card reveal reveal-delay-2">
+          <span class="service-number">03</span>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <h3>Herramientas Industriales</h3>
+          <p>Suministro de herramientas especializadas para corte, perforación, desbaste y otras aplicaciones industriales.</p>
+        </div>
+        <div class="service-card reveal reveal-delay-1">
+          <span class="service-number">04</span>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+          </div>
+          <h3>Consumibles Industriales</h3>
+          <p>Provisión continua de discos, cepillos, granalla y otros consumibles esenciales para la producción.</p>
+        </div>
+        <div class="service-card reveal reveal-delay-2">
+          <span class="service-number">05</span>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          </div>
+          <h3>Gestión de Compras e Importación</h3>
+          <p>Coordinación integral del proceso de adquisición e importación de equipos especializados desde el exterior.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SECTORES ═══ -->
+  <section class="sectors" id="sectores">
+    <div class="container">
+      <div class="sectors-layout">
+        <div>
+          <div class="section-label reveal">Sectores</div>
+          <h2 class="section-title reveal reveal-delay-1">Industrias que atendemos</h2>
+          <p class="section-subtitle reveal reveal-delay-2">Brindamos soluciones adaptadas a las necesidades específicas de cada sector industrial, con conocimiento técnico especializado.</p>
+        </div>
+        <div class="sectors-grid">
+          <div class="sector-item reveal">
+            <div class="sector-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"/><path d="M5 20V8l7-5 7 5v12"/><path d="M9 20v-4h6v4"/></svg>
+            </div>
+            <div>
+              <h4>Manufactura</h4>
+              <p>Plantas de producción</p>
+            </div>
+          </div>
+          <div class="sector-item reveal reveal-delay-1">
+            <div class="sector-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="14" rx="2"/><path d="M12 6V2M6 6V4M18 6V4"/></svg>
+            </div>
+            <div>
+              <h4>Construcción</h4>
+              <p>Obras e infraestructura</p>
+            </div>
+          </div>
+          <div class="sector-item reveal reveal-delay-2">
+            <div class="sector-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
+            <div>
+              <h4>Minería</h4>
+              <p>Extracción y procesamiento</p>
+            </div>
+          </div>
+          <div class="sector-item reveal reveal-delay-3">
+            <div class="sector-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <div>
+              <h4>Energía</h4>
+              <p>Generación y distribución</p>
+            </div>
+          </div>
+          <div class="sector-item reveal reveal-delay-4" style="grid-column: 1 / -1;">
+            <div class="sector-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+            </div>
+            <div>
+              <h4>Mantenimiento Industrial</h4>
+              <p>Soporte continuo de operaciones</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PRODUCTOS ═══ -->
+  <section class="products" id="productos">
+    <div class="container">
+      <div class="products-header">
+        <div class="section-label reveal">Catálogo</div>
+        <h2 class="section-title reveal reveal-delay-1">Productos que suministramos</h2>
+        <p class="section-subtitle reveal reveal-delay-2">Herramientas, equipos y consumibles especializados, seleccionados según las necesidades de cada aplicación industrial.</p>
+      </div>
+      <div class="products-categories">
+        <div class="product-category reveal">
+          <div class="product-cat-header">
+            <div class="product-cat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            </div>
+            <h3>Herramientas y Equipos</h3>
+          </div>
+          <ul class="product-list">
+            <li>Motortools</li>
+            <li>Taladros magnéticos</li>
+            <li>Polipastos</li>
+            <li>Herramientas de corte</li>
+            <li>Fresas de carburo</li>
+            <li>Brocas anulares</li>
+            <li>Brocas HSS</li>
+            <li>Brocas industriales (Nitto Kohki)</li>
+          </ul>
+        </div>
+        <div class="product-category reveal reveal-delay-1">
+          <div class="product-cat-header">
+            <div class="product-cat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <h3>Consumibles Industriales</h3>
+          </div>
+          <ul class="product-list">
+            <li>Discos de corte y desbaste</li>
+            <li>Cepillos de alambre</li>
+            <li>Granalla para procesos industriales</li>
+          </ul>
+        </div>
+        <div class="product-category reveal reveal-delay-2">
+          <div class="product-cat-header">
+            <div class="product-cat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+            </div>
+            <h3>Repuestos y Partes Técnicas</h3>
+          </div>
+          <ul class="product-list">
+            <li>Repuestos industriales</li>
+            <li>Partes electrónicas bajo pedido</li>
+            <li>Componentes técnicos especializados</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONTACTO ═══ -->
+  <section class="contact" id="contacto">
+    <div class="container">
+      <div class="contact-grid">
+        <div>
+          <div class="section-label reveal">Contacto</div>
+          <h2 class="section-title reveal reveal-delay-1">Hablemos de su próximo proyecto</h2>
+          <p class="section-subtitle reveal reveal-delay-2">Estamos listos para brindarle la asesoría técnica que su empresa necesita. Contáctenos para una consulta sin compromiso.</p>
+          <div class="contact-info-cards">
+            <a href="tel:+5073986559" class="contact-info-card reveal reveal-delay-1">
+              <div class="contact-info-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div>
+                <div class="contact-info-label">Teléfono</div>
+                <div class="contact-info-value">+507 398-6559</div>
+              </div>
+            </a>
+            <a href="https://wa.me/50769212056" target="_blank" class="contact-info-card reveal reveal-delay-2">
+              <div class="contact-info-icon" style="background: rgba(37, 211, 102, 0.12);">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+              </div>
+              <div>
+                <div class="contact-info-label">WhatsApp</div>
+                <div class="contact-info-value">+507 6921-2056</div>
+              </div>
+            </a>
+            <div class="contact-info-card reveal reveal-delay-3">
+              <div class="contact-info-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              </div>
+              <div>
+                <div class="contact-info-label">Asesor</div>
+                <div class="contact-info-value">Pablo Bravo</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form reveal reveal-delay-2">
+          <h3>Solicitar Asesoría</h3>
+          <p>Complete el formulario y nos pondremos en contacto con usted.</p>
+          <form onsubmit="event.preventDefault(); this.querySelector('.form-submit').textContent='¡Mensaje enviado!'; this.querySelector('.form-submit').style.background='#25D366';">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="name">Nombre completo</label>
+                <input type="text" id="name" placeholder="Su nombre" required>
+              </div>
+              <div class="form-group">
+                <label for="company">Empresa</label>
+                <input type="text" id="company" placeholder="Nombre de la empresa">
+              </div>
+              <div class="form-group">
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" placeholder="correo@empresa.com" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Teléfono</label>
+                <input type="tel" id="phone" placeholder="+507 0000-0000">
+              </div>
+              <div class="form-group full">
+                <label for="service">Servicio de interés</label>
+                <select id="service">
+                  <option value="">Seleccione un servicio</option>
+                  <option>Asesoría técnica industrial</option>
+                  <option>Venta y suministro de maquinaria</option>
+                  <option>Herramientas industriales</option>
+                  <option>Consumibles industriales</option>
+                  <option>Gestión de compras e importación</option>
+                </select>
+              </div>
+              <div class="form-group full">
+                <label for="message">Mensaje</label>
+                <textarea id="message" placeholder="Describa brevemente su necesidad..."></textarea>
+              </div>
+            </div>
+            <button type="submit" class="form-submit">
+              Enviar Solicitud
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="requirements/Logo Consultores PB-01.png" alt="Consultores PB">
+            <span class="footer-logo-text">Consultores <span>PB</span></span>
+          </div>
+          <p>Asesoría técnica y soluciones industriales confiables en Panamá. Su aliado estratégico en el sector industrial.</p>
+        </div>
+        <div>
+          <h4>Navegación</h4>
+          <ul class="footer-links">
+            <li><a href="#empresa">La Empresa</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#sectores">Sectores</a></li>
+            <li><a href="#productos">Productos</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Servicios</h4>
+          <ul class="footer-links">
+            <li><a href="#servicios">Asesoría Técnica</a></li>
+            <li><a href="#servicios">Maquinaria</a></li>
+            <li><a href="#servicios">Herramientas</a></li>
+            <li><a href="#servicios">Importación</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <ul class="footer-links">
+            <li><a href="tel:+5073986559">+507 398-6559</a></li>
+            <li><a href="https://wa.me/50769212056">+507 6921-2056</a></li>
+            <li><a href="#contacto">Formulario</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2025 Consultores PB. Todos los derechos reservados.</span>
+        <span>Panamá</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══ WHATSAPP FLOAT ═══ -->
+  <a href="https://wa.me/50769212056" target="_blank" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+    <span class="whatsapp-pulse"></span>
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script>
+    // ── Nav scroll effect ──
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+
+    // ── Mobile menu ──
+    const toggle = document.getElementById('navToggle');
+    const links = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => {
+      toggle.classList.toggle('active');
+      links.classList.toggle('active');
+    });
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        toggle.classList.remove('active');
+        links.classList.remove('active');
+      });
+    });
+
+    // ── Reveal on scroll ──
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+    reveals.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
