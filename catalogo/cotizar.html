@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solicitar cotización — Consultores PB</title>
+  <meta name="description" content="Solicita tu cotización de herramientas y equipos industriales. Te respondemos a la brevedad.">
+  <link rel="icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/estilos.css">
+</head>
+<body>
+
+<!-- CABECERA (igual que en index.html) -->
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-left">
+      <a href="tel:+5073986559"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>+507 398-6559</a>
+      <span class="hide-sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>info@consultorespb.com</span>
+    </div>
+    <div class="topbar-right"><a href="index.html">← Volver al catálogo</a></div>
+  </div>
+</div>
+<header class="header">
+  <div class="container">
+    <a href="index.html" class="brand"><img src="assets/logo.png" alt="Consultores PB"><div class="brand-txt"><strong>Consultores PB</strong><span>Soluciones Industriales</span></div></a>
+    <form class="search" onsubmit="return false"><input type="search" placeholder="Buscar producto, marca o código…"><button aria-label="Buscar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button></form>
+    <div class="header-actions"><a href="categoria.html" class="btn btn-ghost">Ver catálogo</a></div>
+  </div>
+</header>
+
+<!-- BREADCRUMB -->
+<div class="crumb">
+  <div class="container"><a href="index.html">Inicio</a><span class="sep">/</span><span class="here">Solicitar cotización</span></div>
+</div>
+
+<div class="container">
+  <div class="quote-wrap">
+
+    <!-- FORMULARIO -->
+    <div>
+      <div class="section-head" style="margin-bottom:24px">
+        <span class="kicker">Sin compromiso</span>
+        <h2 style="font-size:28px">Solicita tu cotización</h2>
+        <p>Completa el formulario y te enviamos precio y disponibilidad a la brevedad. Sin carrito de compras: atención directa y personalizada.</p>
+      </div>
+
+      <!-- Producto seleccionado (se carga solo si vienes desde una ficha) -->
+      <div class="quote-product" id="qp-box" style="background:var(--amber-soft);border-color:var(--amber);color:var(--ink)">
+        <img id="qp-img" src="assets/logo.png" alt="">
+        <div><strong id="qp-name">Producto general</strong><span id="qp-sku">Puedes detallar lo que necesitas abajo</span></div>
+      </div>
+
+      <form class="form-card" onsubmit="return pbSubmitQuote(event)">
+        <div class="form-row">
+          <div class="field"><label>Nombre <span class="req">*</span></label><input name="nombre" required placeholder="Tu nombre"></div>
+          <div class="field"><label>Empresa</label><input name="empresa" placeholder="Nombre de la empresa"></div>
+        </div>
+        <div class="form-row">
+          <div class="field"><label>Correo <span class="req">*</span></label><input type="email" name="email" required placeholder="correo@empresa.com"></div>
+          <div class="field"><label>Teléfono / WhatsApp <span class="req">*</span></label><input name="telefono" required placeholder="+507 0000-0000"></div>
+        </div>
+        <div class="form-row">
+          <div class="field"><label>Producto de interés</label><input id="q-producto" name="producto" placeholder="Ej. Amoladora eléctrica"></div>
+          <div class="field"><label>Cantidad</label><input name="cantidad" placeholder="Ej. 10 unidades"></div>
+        </div>
+        <div class="field"><label>Mensaje / detalle del requerimiento <span class="req">*</span></label><textarea id="q-mensaje" name="mensaje" required placeholder="Cuéntanos qué necesitas, especificaciones, plazos, etc."></textarea></div>
+        <button type="submit" class="btn btn-amber btn-lg btn-block"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>Enviar solicitud por WhatsApp</button>
+        <p style="font-size:12.5px;color:var(--muted);text-align:center;margin-top:14px">Al enviar, se abrirá WhatsApp con tu solicitud lista. También puedes escribirnos a <a href="mailto:info@consultorespb.com" style="color:var(--amber-dark);font-weight:600">info@consultorespb.com</a></p>
+      </form>
+    </div>
+
+    <!-- ASIDE: datos de contacto -->
+    <aside class="quote-aside">
+      <h3>¿Prefieres contacto directo?</h3>
+      <p>Escríbenos o llámanos y con gusto te asesoramos.</p>
+      <a href="https://wa.me/50769212056" target="_blank" class="btn btn-wa btn-block" style="margin-bottom:8px"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.6.1-1.5-.7-2.4-1.3-3.4-3-.3-.5.3-.4.8-1.4.1-.2 0-.3 0-.5-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.8.8-1 1.9-.7 3.2.4 1.5 1.4 2.8 1.5 3 .2.2 2.7 4.1 6.5 5.6 2.4.9 3 .8 3.6.7.7-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.2-.3-.2-.6-.3z"/><path d="M12 2A10 10 0 002 12a10 10 0 001.5 5.2L2 22l4.9-1.3A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2z"/></svg>Chatear por WhatsApp</a>
+      <div class="quote-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg><div><strong>+507 398-6559</strong><span>Llámanos en horario laboral</span></div></div>
+      <div class="quote-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><div><strong>info@consultorespb.com</strong><span>Te respondemos por correo</span></div></div>
+      <div class="quote-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><div><strong>Lun – Vie, 8:00 – 17:00</strong><span>Respuesta el mismo día hábil</span></div></div>
+    </aside>
+
+  </div>
+</div>
+
+<!-- FOOTER (igual que en index.html) -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div><a href="index.html" class="brand"><img src="assets/logo.png" alt="Consultores PB"><div class="brand-txt"><strong>Consultores PB</strong><span>Soluciones Industriales</span></div></a><p class="footer-intro">Distribuidor de herramientas y equipos industriales en Panamá.</p></div>
+      <div class="footer-col"><h4>Catálogo</h4><ul><li><a href="categoria.html">Amoladoras</a></li><li><a href="categoria.html">Fresas de carburo</a></li><li><a href="categoria.html">Brocas anulares</a></li><li><a href="categoria.html">Discos de corte</a></li></ul></div>
+      <div class="footer-col"><h4>Empresa</h4><ul><li><a href="#">Nosotros</a></li><li><a href="cotizar.html">Solicitar cotización</a></li><li><a href="#">Preguntas frecuentes</a></li></ul></div>
+      <div class="footer-col"><h4>Contacto</h4><ul class="footer-contact"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>+507 398-6559</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>info@consultorespb.com</li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Consultores PB. Todos los derechos reservados.</span></div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

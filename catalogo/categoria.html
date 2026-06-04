@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de productos — Consultores PB</title>
+  <meta name="description" content="Catálogo de herramientas y equipos industriales: amoladoras, fresas de carburo, brocas anulares, discos de corte y más.">
+  <link rel="icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/estilos.css">
+</head>
+<body>
+
+<!-- CABECERA (igual que en index.html) -->
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-left">
+      <a href="tel:+5073986559"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>+507 398-6559</a>
+      <span class="hide-sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>info@consultorespb.com</span>
+    </div>
+    <div class="topbar-right"><a href="cotizar.html">Mi cotización</a></div>
+  </div>
+</div>
+<header class="header">
+  <div class="container">
+    <a href="index.html" class="brand"><img src="assets/logo.png" alt="Consultores PB"><div class="brand-txt"><strong>Consultores PB</strong><span>Soluciones Industriales</span></div></a>
+    <form class="search" onsubmit="return false"><input type="search" placeholder="Buscar producto, marca o código…"><button aria-label="Buscar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button></form>
+    <div class="header-actions"><a href="cotizar.html" class="btn btn-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>Solicitar cotización</a></div>
+  </div>
+</header>
+<nav class="nav">
+  <div class="container">
+    <a href="categoria.html" class="active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>Catálogo</a>
+    <a href="categoria.html">Amoladoras</a><a href="categoria.html">Fresas de carburo</a><a href="categoria.html">Brocas anulares</a><a href="categoria.html">Discos de corte</a><a href="categoria.html">Taladros magnéticos</a><a href="categoria.html">Polipastos</a>
+    <span class="nav-cta"><a href="cotizar.html">Cotiza tu pedido →</a></span>
+  </div>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="crumb">
+  <div class="container">
+    <a href="index.html">Inicio</a><span class="sep">/</span><span class="here">Catálogo de productos</span>
+  </div>
+</div>
+
+<!-- LAYOUT: FILTROS + GRILLA -->
+<div class="container">
+  <div class="shop">
+
+    <!-- ░░ FILTROS (decorativos en esta plantilla; el cliente define qué filtros usar) ░░ -->
+    <aside class="filters">
+      <div class="filter-block">
+        <h4>Categoría</h4>
+        <label class="filter-opt"><input type="checkbox"> Amoladoras <span class="count">8</span></label>
+        <label class="filter-opt"><input type="checkbox"> Fresas de carburo <span class="count">24</span></label>
+        <label class="filter-opt"><input type="checkbox"> Brocas anulares <span class="count">16</span></label>
+        <label class="filter-opt"><input type="checkbox"> Discos de corte <span class="count">12</span></label>
+        <label class="filter-opt"><input type="checkbox"> Taladros magnéticos <span class="count">5</span></label>
+        <label class="filter-opt"><input type="checkbox"> Polipastos <span class="count">6</span></label>
+      </div>
+      <div class="filter-block">
+        <h4>Marca</h4>
+        <label class="filter-opt"><input type="checkbox"> DeWalt <span class="count">9</span></label>
+        <label class="filter-opt"><input type="checkbox"> Hougen <span class="count">5</span></label>
+        <label class="filter-opt"><input type="checkbox"> Bosch <span class="count">7</span></label>
+        <label class="filter-opt"><input type="checkbox"> Norton <span class="count">11</span></label>
+      </div>
+      <div class="filter-block">
+        <h4>Material de trabajo</h4>
+        <label class="filter-opt"><input type="checkbox"> Acero</label>
+        <label class="filter-opt"><input type="checkbox"> Acero inoxidable</label>
+        <label class="filter-opt"><input type="checkbox"> Aluminio / no ferrosos</label>
+        <label class="filter-opt"><input type="checkbox"> Fundición</label>
+      </div>
+      <a href="cotizar.html" class="btn btn-navy btn-block">¿No lo encuentras? Cotiza</a>
+    </aside>
+
+    <!-- ░░ RESULTADOS ░░ -->
+    <main>
+      <div class="shop-main-head">
+        <div>
+          <h1>Catálogo de productos <span class="result-count">· 71 productos</span></h1>
+        </div>
+        <div class="shop-sort">
+          <span>Ordenar:</span>
+          <select><option>Relevancia</option><option>Nombre A–Z</option><option>Más recientes</option></select>
+        </div>
+      </div>
+
+      <!-- 👉 EDITAR: cada <article class="prod-card"> es un producto.
+           Duplica un bloque para agregar productos a esta página. -->
+      <div class="prod-grid cols-3">
+
+        <article class="prod-card">
+          <div class="prod-card-img"><span class="prod-tag amber">Destacado</span><img src="https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80" alt="Amoladora"></div>
+          <div class="prod-card-body"><span class="prod-brand">DeWalt</span><h3><a href="producto.html">Amoladora eléctrica de alta potencia</a></h3><p class="prod-sku">SKU: AMO-DW-001</p><ul class="prod-specs"><li>Motor de alto amperaje</li><li>Funciona con CA/CC</li></ul><div class="prod-card-foot"><a href="producto.html" class="btn btn-ghost">Ver ficha</a><a href="cotizar.html?producto=Amoladora%20eléctrica%20DeWalt&sku=AMO-DW-001" class="btn btn-amber">Cotizar</a></div></div>
+        </article>
+
+        <article class="prod-card">
+          <div class="prod-card-img"><img src="https://images.unsplash.com/photo-1530124566582-a618bc2615dc?w=500&q=80" alt="Fresa SB"></div>
+          <div class="prod-card-body"><span class="prod-brand">Consultores PB</span><h3><a href="producto.html">Fresa de carburo tipo SB</a></h3><p class="prod-sku">SKU: FRESA-SB-1/4</p><ul class="prod-specs"><li>Forma cilíndrica</li><li>Empaque individual</li></ul><div class="prod-card-foot"><a href="producto.html" class="btn btn-ghost">Ver ficha</a><a href="cotizar.html?producto=Fresa%20de%20carburo%20tipo%20SB&sku=FRESA-SB-1/4" class="btn btn-amber">Cotizar</a></div></div>
+        </article>
+
+        <article class="prod-card">
+          <div class="prod-card-img"><img src="https://images.unsplash.com/photo-1530124566582-a618bc2615dc?w=500&q=80&sat=-30" alt="Fresa SF"></div>
+          <div class="prod-card-body"><span class="prod-brand">Consultores PB</span><h3><a href="producto.html">Fresa de carburo tipo SF</a></h3><p class="prod-sku">SKU: FRESA-SF-3/8</p><ul class="prod-specs"><li>Forma de árbol redondo</li><li>Diversos materiales</li></ul><div class="prod-card-foot"><a href="producto.html" class="btn btn-ghost">Ver ficha</a><a href="cotizar.html?producto=Fresa%20de%20carburo%20tipo%20SF&sku=FRESA-SF-3/8" class="btn btn-amber">Cotizar</a></div></div>
+        </article>
+
+        <article class="prod-card">
+          <div class="prod-card-img"><img src="https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=500&q=80" alt="Broca anular"></div>
+          <div class="prod-card-body"><span class="prod-brand">Consultores PB</span><h3><a href="producto.html">Broca / cortador anular HSS 22 mm</a></h3><p class="prod-sku">SKU: BRO-HSS-22</p><ul class="prod-specs"><li>Acero de alta velocidad</li><li>Uso industrial intensivo</li></ul><div class="prod-card-foot"><a href="producto.html" class="btn btn-ghost">Ver ficha</a><a href="cotizar.html?producto=Broca%20anular%20HSS%2022mm&sku=BRO-HSS-22" class="btn btn-amber">Cotizar</a></div></div>
+        </article>
+
+        <article class="prod-card">
+          <div class="prod-card-img"><span class="prod-tag">Más vendido</span><img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=500&q=80" alt="Disco de corte"></div>
+          <div class="prod-card-body"><span class="prod-brand">Norton</span><h3><a href="producto.html">Disco de corte 4½" para metal</a></h3><p class="prod-sku">SKU: DISCO-115-1.0</p><ul class="prod-specs"><li>Acero e inoxidable</li><li>Cortes limpios y precisos</li></ul><div class="prod-card-foot"><a href="producto.html" class="btn btn-ghost">Ver ficha</a><a href="cotizar.html?producto=Disco%20de%20corte%204½%20pulg&sku=DISCO-115-1.0" class="btn btn-amber">Cotizar</a></div></div>
+        </article>
+
+        <article class="prod-card">
+          <div class="prod-card-img"><img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=500&q=80&sat=-40" alt="Disco de desbaste"></div>
+          <div class="prod-card-body"><span class="prod-brand">Norton</span><h3><a href="producto.html">Disco de desbaste 4½" x 6 mm</a></h3><p class="prod-sku">SKU: DISCO-115-6.0</p><ul class="prod-specs"><li>Desbaste rápido y agresivo</li><li>Elimina rebabas y soldaduras</li></ul><div class="prod-card-foot"><a href="producto.html" class="btn btn-ghost">Ver ficha</a><a href="cotizar.html?producto=Disco%20de%20desbaste%204½%20pulg&sku=DISCO-115-6.0" class="btn btn-amber">Cotizar</a></div></div>
+        </article>
+
+        <article class="prod-card">
+          <div class="prod-card-img"><img src="https://images.unsplash.com/photo-1426927308491-6380b6a9936f?w=500&q=80" alt="Cepillo de alambre"></div>
+          <div class="prod-card-body"><span class="prod-brand">Consultores PB</span><h3><a href="producto.html">Cepillo de alambre anudado</a></h3><p class="prod-sku">SKU: CEP-ANU-115</p><ul class="prod-specs"><li>Para eliminación de óxido</li><li>Vástago roscado universal</li></ul><div class="prod-card-foot"><a href="producto.html" class="btn btn-ghost">Ver ficha</a><a href="cotizar.html?producto=Cepillo%20de%20alambre%20anudado&sku=CEP-ANU-115" class="btn btn-amber">Cotizar</a></div></div>
+        </article>
+
+        <article class="prod-card">
+          <div class="prod-card-img"><span class="prod-tag amber">Equipo</span><img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=500&q=80" alt="Taladro magnético"></div>
+          <div class="prod-card-body"><span class="prod-brand">Hougen</span><h3><a href="producto.html">Taladro magnético dos velocidades</a></h3><p class="prod-sku">SKU: TAL-MAG-HG</p><ul class="prod-specs"><li>Alto torque · motor potente</li><li>Sistema de seguridad integrado</li></ul><div class="prod-card-foot"><a href="producto.html" class="btn btn-ghost">Ver ficha</a><a href="cotizar.html?producto=Taladro%20magnético%20Hougen&sku=TAL-MAG-HG" class="btn btn-amber">Cotizar</a></div></div>
+        </article>
+
+        <article class="prod-card">
+          <div class="prod-card-img"><span class="prod-tag amber">Equipo</span><img src="https://images.unsplash.com/photo-1565891741441-64926e441838?w=500&q=80" alt="Polipasto"></div>
+          <div class="prod-card-body"><span class="prod-brand">Heavy Duty</span><h3><a href="producto.html">Polipasto eléctrico de cadena</a></h3><p class="prod-sku">SKU: POL-ELE-1T</p><ul class="prod-specs"><li>Cadena G80 alta resistencia</li><li>Carcasa de hierro fundido</li></ul><div class="prod-card-foot"><a href="producto.html" class="btn btn-ghost">Ver ficha</a><a href="cotizar.html?producto=Polipasto%20eléctrico%20de%20cadena&sku=POL-ELE-1T" class="btn btn-amber">Cotizar</a></div></div>
+        </article>
+
+      </div>
+    </main>
+
+  </div>
+</div>
+
+<!-- FRANJA CTA -->
+<section class="cta-band">
+  <div class="container">
+    <div><h2>¿No encuentras lo que buscas?</h2><p>Tenemos más productos en catálogo. Pídenos una cotización a la medida.</p></div>
+    <div class="btns"><a href="cotizar.html" class="btn btn-amber btn-lg">Solicitar cotización</a></div>
+  </div>
+</section>
+
+<!-- FOOTER (igual que en index.html) -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <a href="index.html" class="brand"><img src="assets/logo.png" alt="Consultores PB"><div class="brand-txt"><strong>Consultores PB</strong><span>Soluciones Industriales</span></div></a>
+        <p class="footer-intro">Distribuidor de herramientas y equipos industriales en Panamá.</p>
+      </div>
+      <div class="footer-col"><h4>Catálogo</h4><ul><li><a href="categoria.html">Amoladoras</a></li><li><a href="categoria.html">Fresas de carburo</a></li><li><a href="categoria.html">Brocas anulares</a></li><li><a href="categoria.html">Discos de corte</a></li></ul></div>
+      <div class="footer-col"><h4>Empresa</h4><ul><li><a href="#">Nosotros</a></li><li><a href="cotizar.html">Solicitar cotización</a></li><li><a href="#">Preguntas frecuentes</a></li></ul></div>
+      <div class="footer-col"><h4>Contacto</h4><ul class="footer-contact"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>+507 398-6559</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>info@consultorespb.com</li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Consultores PB. Todos los derechos reservados.</span></div>
+  </div>
+</footer>
+
+<a class="wa-fab" href="https://wa.me/50769212056" target="_blank" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.6.1-1.5-.7-2.4-1.3-3.4-3-.3-.5.3-.4.8-1.4.1-.2 0-.3 0-.5-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.8.8-1 1.9-.7 3.2.4 1.5 1.4 2.8 1.5 3 .2.2 2.7 4.1 6.5 5.6 2.4.9 3 .8 3.6.7.7-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.2-.3-.2-.6-.3z"/><path d="M12 2A10 10 0 002 12a10 10 0 001.5 5.2L2 22l4.9-1.3A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2z"/></svg></a>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

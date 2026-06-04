@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ════════════════════════════════════════════════════════════
+       👉 PLANTILLA DE FICHA DE PRODUCTO (hoja informativa)
+       Para crear un producto nuevo: DUPLICA este archivo
+       (ej. producto-amoladora.html) y edita SOLO las zonas marcadas
+       con "👉 EDITAR". El botón "Solicitar cotización" lleva a
+       cotizar.html con el producto ya cargado.
+       ════════════════════════════════════════════════════════════ -->
+  <title>Amoladora eléctrica de alta potencia — Consultores PB</title>
+  <meta name="description" content="Amoladora eléctrica de alta potencia, funciona con CA/CC, ideal para molienda y trabajos industriales. Solicita tu cotización.">
+  <link rel="icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/estilos.css">
+</head>
+<body>
+
+<!-- CABECERA (igual que en index.html) -->
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-left">
+      <a href="tel:+5073986559"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>+507 398-6559</a>
+      <span class="hide-sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>info@consultorespb.com</span>
+    </div>
+    <div class="topbar-right"><a href="cotizar.html">Mi cotización</a></div>
+  </div>
+</div>
+<header class="header">
+  <div class="container">
+    <a href="index.html" class="brand"><img src="assets/logo.png" alt="Consultores PB"><div class="brand-txt"><strong>Consultores PB</strong><span>Soluciones Industriales</span></div></a>
+    <form class="search" onsubmit="return false"><input type="search" placeholder="Buscar producto, marca o código…"><button aria-label="Buscar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button></form>
+    <div class="header-actions"><a href="cotizar.html" class="btn btn-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>Solicitar cotización</a></div>
+  </div>
+</header>
+<nav class="nav">
+  <div class="container">
+    <a href="categoria.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>Catálogo</a>
+    <a href="categoria.html" class="active">Amoladoras</a><a href="categoria.html">Fresas de carburo</a><a href="categoria.html">Brocas anulares</a><a href="categoria.html">Discos de corte</a><a href="categoria.html">Taladros magnéticos</a><a href="categoria.html">Polipastos</a>
+    <span class="nav-cta"><a href="cotizar.html">Cotiza tu pedido →</a></span>
+  </div>
+</nav>
+
+<!-- BREADCRUMB  👉 EDITAR el nombre del producto al final -->
+<div class="crumb">
+  <div class="container">
+    <a href="index.html">Inicio</a><span class="sep">/</span><a href="categoria.html">Amoladoras</a><span class="sep">/</span><span class="here">Amoladora eléctrica de alta potencia</span>
+  </div>
+</div>
+
+<!-- ░░░░░░░░░░░░░░ FICHA ░░░░░░░░░░░░░░ -->
+<div class="container">
+  <div class="product">
+
+    <!-- 👉 EDITAR: imágenes del producto (la grande y las miniaturas) -->
+    <div class="gallery">
+      <div class="main-img"><img id="pd-main-img" src="https://images.unsplash.com/photo-1504148455328-c376907d081c?w=900&q=80" alt="Amoladora eléctrica"></div>
+      <div class="thumbs">
+        <button class="active" onclick="pbSelectThumb(this,'https://images.unsplash.com/photo-1504148455328-c376907d081c?w=900&q=80')"><img src="https://images.unsplash.com/photo-1504148455328-c376907d081c?w=200&q=80" alt=""></button>
+        <button onclick="pbSelectThumb(this,'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=900&q=80')"><img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=200&q=80" alt=""></button>
+        <button onclick="pbSelectThumb(this,'https://images.unsplash.com/photo-1530124566582-a618bc2615dc?w=900&q=80')"><img src="https://images.unsplash.com/photo-1530124566582-a618bc2615dc?w=200&q=80" alt=""></button>
+      </div>
+    </div>
+
+    <!-- 👉 EDITAR: marca, título, datos y descripción -->
+    <div class="pd-info">
+      <span class="pd-brand">DeWalt</span>
+      <h1 class="pd-title">Amoladora eléctrica de alta potencia</h1>
+      <div class="pd-meta">
+        <span>SKU: <strong>AMO-DW-001</strong></span>
+        <span>Categoría: <strong>Amoladoras</strong></span>
+        <span>Disponibilidad: <strong style="color:var(--ok)">En catálogo</strong></span>
+      </div>
+      <p class="pd-lead">Amoladora eléctrica que cuenta con un motor de alto amperaje, ofreciendo alta potencia y velocidad para aplicaciones de molienda. Su capacidad de funcionamiento con alimentación de CA/CC permite usarla con máquinas de soldadura y generadores, lo que aumenta su versatilidad y productividad.</p>
+
+      <!-- Tabla de especificaciones  👉 EDITAR filas según el producto -->
+      <table class="spec-table">
+        <tr><th>Tipo de motor</th><td>Eléctrico de alto amperaje</td></tr>
+        <tr><th>Alimentación</th><td>CA / CC (compatible con generadores y máquinas de soldar)</td></tr>
+        <tr><th>Interruptor</th><td>De paleta con botón de bloqueo</td></tr>
+        <tr><th>Pinza de precisión</th><td>Asegura los accesorios adecuadamente</td></tr>
+        <tr><th>Funda reductora</th><td>Disponible como accesorio opcional</td></tr>
+        <tr><th>Aplicación</th><td>Molienda, desbaste y trabajos industriales</td></tr>
+      </table>
+
+      <!-- BLOQUE COTIZAR (no carrito): lleva a cotizar.html con el producto cargado -->
+      <div class="pd-quote">
+        <p>Este es un sitio informativo. Para precio y disponibilidad, solicita tu cotización — te respondemos a la brevedad.</p>
+        <div class="btn-row">
+          <!-- 👉 EDITAR el ?producto= y &sku= para que coincidan con este producto -->
+          <a href="cotizar.html?producto=Amoladora%20eléctrica%20de%20alta%20potencia&sku=AMO-DW-001&img=https://images.unsplash.com/photo-1504148455328-c376907d081c?w=200%26q=80" class="btn btn-amber btn-lg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>Solicitar cotización</a>
+          <a href="https://wa.me/50769212056?text=Hola,%20me%20interesa%20la%20Amoladora%20eléctrica%20(AMO-DW-001)" target="_blank" class="btn btn-wa btn-lg"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.6.1-1.5-.7-2.4-1.3-3.4-3-.3-.5.3-.4.8-1.4.1-.2 0-.3 0-.5-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.8.8-1 1.9-.7 3.2.4 1.5 1.4 2.8 1.5 3 .2.2 2.7 4.1 6.5 5.6 2.4.9 3 .8 3.6.7.7-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.2-.3-.2-.6-.3z"/><path d="M12 2A10 10 0 002 12a10 10 0 001.5 5.2L2 22l4.9-1.3A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2z"/></svg>Cotizar por WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- Características destacadas  👉 EDITAR -->
+      <ul class="pd-feats">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Alta potencia y velocidad para molienda exigente</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Compatible con CA/CC, generadores y soldadoras</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Manejo seguro con interruptor de bloqueo</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<!-- ░░░░░ DESCRIPCIÓN + APLICACIONES (pestañas) ░░░░░ -->
+<div class="container">
+  <div class="pd-sections">
+    <div class="pd-tabs">
+      <button class="pd-tab active" onclick="pbTab(this,'pane-desc')">Descripción</button>
+      <button class="pd-tab" onclick="pbTab(this,'pane-app')">Aplicaciones</button>
+    </div>
+
+    <!-- 👉 EDITAR descripción larga -->
+    <div class="pd-pane" id="pane-desc">
+      <p style="max-width:760px;color:var(--body);margin-bottom:14px">Amoladora eléctrica diseñada para ofrecer alta potencia y velocidad en aplicaciones de molienda y desbaste. Su funcionamiento con alimentación de CA y CC permite usarla incluso con máquinas de soldadura y generadores, aumentando su versatilidad en obra y taller.</p>
+      <p style="max-width:760px;color:var(--body)">Incluye un interruptor de paleta con botón de bloqueo para un fácil manejo y una pinza de precisión que asegura los accesorios adecuadamente. Opcionalmente está disponible una funda reductora. Confía en nuestros productos para obtener resultados excepcionales en todas tus tareas industriales.</p>
+    </div>
+
+    <!-- 👉 EDITAR aplicaciones -->
+    <div class="pd-pane" id="pane-app" style="display:none">
+      <div class="app-grid">
+        <div class="app-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg><div><h4>Metalmecánica</h4><p>Molienda y desbaste de piezas metálicas.</p></div></div>
+        <div class="app-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 22l1-1h3l9-9"/><path d="M3 21l9-9"/><path d="M14.5 5.5l4 4"/></svg><div><h4>Construcción</h4><p>Preparación de superficies y eliminación de excesos.</p></div></div>
+        <div class="app-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 00-6 0v4"/><rect x="2" y="9" width="20" height="11" rx="2"/></svg><div><h4>Mantenimiento</h4><p>Reparación en talleres e industria.</p></div></div>
+        <div class="app-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg><div><h4>Soldadura</h4><p>Limpieza de cordones y preparación de uniones.</p></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ░░░░░ PRODUCTOS RELACIONADOS ░░░░░ -->
+<section class="section alt">
+  <div class="container">
+    <div class="section-head row"><div><span class="kicker">También te puede servir</span><h2>Productos relacionados</h2></div><a href="categoria.html" class="link-more">Ver catálogo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div>
+    <div class="prod-grid">
+      <article class="prod-card"><div class="prod-card-img"><img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=500&q=80" alt=""></div><div class="prod-card-body"><span class="prod-brand">Norton</span><h3><a href="producto.html">Disco de corte 4½" para metal</a></h3><p class="prod-sku">SKU: DISCO-115-1.0</p><div class="prod-card-foot"><a href="producto.html" class="btn btn-ghost">Ver ficha</a><a href="cotizar.html?producto=Disco%20de%20corte%204½&sku=DISCO-115-1.0" class="btn btn-amber">Cotizar</a></div></div></article>
+      <article class="prod-card"><div class="prod-card-img"><img src="https://images.unsplash.com/photo-1426927308491-6380b6a9936f?w=500&q=80" alt=""></div><div class="prod-card-body"><span class="prod-brand">Consultores PB</span><h3><a href="producto.html">Cepillo de alambre anudado</a></h3><p class="prod-sku">SKU: CEP-ANU-115</p><div class="prod-card-foot"><a href="producto.html" class="btn btn-ghost">Ver ficha</a><a href="cotizar.html?producto=Cepillo%20de%20alambre&sku=CEP-ANU-115" class="btn btn-amber">Cotizar</a></div></div></article>
+      <article class="prod-card"><div class="prod-card-img"><img src="https://images.unsplash.com/photo-1530124566582-a618bc2615dc?w=500&q=80" alt=""></div><div class="prod-card-body"><span class="prod-brand">Consultores PB</span><h3><a href="producto.html">Fresa de carburo tipo SC</a></h3><p class="prod-sku">SKU: FRESA-SC-3/8</p><div class="prod-card-foot"><a href="producto.html" class="btn btn-ghost">Ver ficha</a><a href="cotizar.html?producto=Fresa%20de%20carburo%20SC&sku=FRESA-SC-3/8" class="btn btn-amber">Cotizar</a></div></div></article>
+      <article class="prod-card"><div class="prod-card-img"><img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=500&q=80" alt=""></div><div class="prod-card-body"><span class="prod-brand">Hougen</span><h3><a href="producto.html">Taladro magnético dos velocidades</a></h3><p class="prod-sku">SKU: TAL-MAG-HG</p><div class="prod-card-foot"><a href="producto.html" class="btn btn-ghost">Ver ficha</a><a href="cotizar.html?producto=Taladro%20magnético&sku=TAL-MAG-HG" class="btn btn-amber">Cotizar</a></div></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER (igual que en index.html) -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div><a href="index.html" class="brand"><img src="assets/logo.png" alt="Consultores PB"><div class="brand-txt"><strong>Consultores PB</strong><span>Soluciones Industriales</span></div></a><p class="footer-intro">Distribuidor de herramientas y equipos industriales en Panamá.</p></div>
+      <div class="footer-col"><h4>Catálogo</h4><ul><li><a href="categoria.html">Amoladoras</a></li><li><a href="categoria.html">Fresas de carburo</a></li><li><a href="categoria.html">Brocas anulares</a></li><li><a href="categoria.html">Discos de corte</a></li></ul></div>
+      <div class="footer-col"><h4>Empresa</h4><ul><li><a href="#">Nosotros</a></li><li><a href="cotizar.html">Solicitar cotización</a></li><li><a href="#">Preguntas frecuentes</a></li></ul></div>
+      <div class="footer-col"><h4>Contacto</h4><ul class="footer-contact"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>+507 398-6559</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>info@consultorespb.com</li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Consultores PB. Todos los derechos reservados.</span></div>
+  </div>
+</footer>
+
+<a class="wa-fab" href="https://wa.me/50769212056" target="_blank" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.6.1-1.5-.7-2.4-1.3-3.4-3-.3-.5.3-.4.8-1.4.1-.2 0-.3 0-.5-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.8.8-1 1.9-.7 3.2.4 1.5 1.4 2.8 1.5 3 .2.2 2.7 4.1 6.5 5.6 2.4.9 3 .8 3.6.7.7-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.2-.3-.2-.6-.3z"/><path d="M12 2A10 10 0 002 12a10 10 0 001.5 5.2L2 22l4.9-1.3A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2z"/></svg></a>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
