@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Consultores PB — Soluciones T&eacute;cnicas Industriales | Panam&aacute;</title>
-  <meta name="description" content="Consultores PB: Asesoría técnica y soluciones industriales en Panamá. Maquinaria, herramientas y consumibles especializados para el sector industrial.">
-  <meta name="keywords" content="consultores industriales, asesoría técnica, maquinaria industrial, herramientas industriales, consumibles industriales, Panamá, importación equipos">
+  <title>Consultores PB — Suministro e Importaci&oacute;n Industrial B2B | Panam&aacute;</title>
+  <meta name="description" content="Consultores PB: Tu aliado estratégico en suministro e importación industrial en Panamá. Consumibles, herramientas de corte, equipos eléctricos y soluciones estructurales B2B.">
+  <meta name="keywords" content="suministro industrial, importación B2B, herramientas de corte, granalla de acero, taladros magnéticos, insertos de carburo, Panamá, DeWalt, Hougen, Drill America, Würth, Accu-Lube, Nitto Kohki">
   <meta name="author" content="Consultores PB">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#0F1923">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Consultores PB — Soluciones Técnicas Industriales">
-  <meta property="og:description" content="Asesoría técnica y soluciones industriales confiables en Panamá. Maquinaria, herramientas y consumibles especializados.">
+  <meta property="og:title" content="Consultores PB — Suministro e Importación Industrial B2B">
+  <meta property="og:description" content="Tu aliado estratégico en suministro e importación industrial en Panamá. El canal directo entre las fábricas líderes globales y tu operación.">
   <meta property="og:locale" content="es_PA">
   <meta property="og:site_name" content="Consultores PB">
 
@@ -845,6 +845,330 @@
       .about-img-accent { width: 140px; height: 140px; bottom: -20px; right: -10px; }
       .contact-form-wrap { padding: 1.5rem; }
     }
+
+    /* ─── NAV DROPDOWN ─── */
+    .nav-item { position: relative; }
+    .nav-dropdown {
+      position: absolute; top: calc(100% + 12px); left: 50%; transform: translateX(-50%) translateY(8px);
+      min-width: 280px; background: var(--white);
+      border: 1px solid var(--gray-100); border-radius: 10px;
+      box-shadow: 0 16px 48px rgba(15,25,35,0.12);
+      padding: 0.6rem; opacity: 0; visibility: hidden;
+      transition: opacity 0.3s var(--ease-power), transform 0.3s var(--ease-power);
+      z-index: 120;
+    }
+    .nav-item:hover .nav-dropdown { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+    .nav-dropdown a {
+      display: flex; align-items: center; gap: 0.7rem;
+      padding: 0.7rem 0.9rem; border-radius: 7px;
+      font-size: 0.82rem; font-weight: 500; color: var(--text-body);
+      transition: background 0.25s, color 0.25s;
+    }
+    .nav-dropdown a::after { display: none; }
+    .nav-dropdown a:hover { background: var(--amber-pale); color: var(--navy); }
+    .nav-dropdown a span.dd-num {
+      font-family: var(--font-display); font-size: 0.7rem; font-weight: 700;
+      color: var(--amber); width: 22px; flex-shrink: 0;
+    }
+    .nav-wa {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 40px; height: 40px; border-radius: 8px; margin-left: 0.4rem;
+      background: #25D366; color: #fff; transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .nav-wa:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(37,211,102,0.4); }
+    .nav-wa svg { width: 20px; height: 20px; }
+    .nav-actions { display: flex; align-items: center; }
+
+    /* ─── BRANDS STRIP ─── */
+    .brands { background: var(--navy); padding: 2.4rem 0; border-bottom: 1px solid rgba(212,149,42,0.15); }
+    .brands-inner { max-width: 1240px; margin: 0 auto; padding: 0 2rem; text-align: center; }
+    .brands-label {
+      font-family: var(--font-display); font-size: 0.68rem; font-weight: 600;
+      letter-spacing: 0.18em; text-transform: uppercase; color: var(--steel-pale);
+      margin-bottom: 1.5rem;
+    }
+    .brands-row {
+      display: flex; align-items: center; justify-content: center;
+      gap: 2.5rem 3.5rem; flex-wrap: wrap;
+    }
+    .brand-name {
+      font-family: var(--font-display); font-size: 1.25rem; font-weight: 700;
+      color: rgba(255,255,255,0.55); letter-spacing: 0.01em;
+      transition: color 0.3s; white-space: nowrap;
+    }
+    .brand-name:hover { color: var(--amber); }
+
+    /* ─── NOSOTROS (rework) ─── */
+    .about-lead {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem 5rem; align-items: start;
+    }
+    .about-lead-copy p {
+      font-family: var(--font-body); font-size: 1rem; font-weight: 300;
+      line-height: 1.8; color: var(--text-body); margin-bottom: 1.2rem;
+    }
+    .about-lead-copy p strong { font-weight: 600; color: var(--text-dark); }
+    .pillars { display: flex; flex-direction: column; gap: 1.1rem; }
+    .pillar {
+      display: flex; gap: 1.1rem; padding: 1.3rem 1.4rem;
+      background: var(--gray-50); border: 1px solid var(--gray-100);
+      border-radius: 10px; transition: all 0.4s var(--ease-power);
+    }
+    .pillar:hover { border-color: var(--amber); background: var(--amber-pale); transform: translateX(4px); }
+    .pillar-icon {
+      width: 42px; height: 42px; border-radius: 9px; flex-shrink: 0;
+      background: var(--navy); display: flex; align-items: center; justify-content: center;
+    }
+    .pillar-icon svg { width: 20px; height: 20px; color: var(--amber); }
+    .pillar-title {
+      font-family: var(--font-display); font-size: 0.95rem; font-weight: 600;
+      color: var(--text-dark); margin-bottom: 0.3rem;
+    }
+    .pillar-text {
+      font-family: var(--font-body); font-size: 0.85rem; font-weight: 300;
+      line-height: 1.6; color: var(--text-muted);
+    }
+    .mv-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 4rem; }
+    .mv-card {
+      padding: 2.2rem; border-radius: 12px; position: relative; overflow: hidden;
+      background: var(--navy); color: var(--white);
+    }
+    .mv-card.vision { background: var(--amber); color: var(--navy); }
+    .mv-card-label {
+      font-family: var(--font-display); font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 0.8rem;
+      color: var(--amber);
+    }
+    .mv-card.vision .mv-card-label { color: var(--navy); }
+    .mv-card-text {
+      font-family: var(--font-body); font-size: 0.98rem; font-weight: 300;
+      line-height: 1.75; color: var(--steel-pale);
+    }
+    .mv-card.vision .mv-card-text { color: var(--navy); font-weight: 400; }
+
+    /* ─── ABOUT CTA BANNER ─── */
+    .about-cta {
+      margin-top: 3rem; padding: 2.5rem 3rem; border-radius: 14px;
+      background: linear-gradient(120deg, var(--navy) 0%, var(--navy-soft) 100%);
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 2rem; flex-wrap: wrap; position: relative; overflow: hidden;
+    }
+    .about-cta::before {
+      content: ''; position: absolute; top: 0; right: 0; width: 40%; height: 100%;
+      background: radial-gradient(circle at top right, rgba(212,149,42,0.18), transparent 70%);
+    }
+    .about-cta-title {
+      font-family: var(--font-display); font-size: clamp(1.3rem, 2vw, 1.7rem);
+      font-weight: 600; color: var(--white); position: relative; z-index: 1; max-width: 520px;
+    }
+    .about-cta-actions { display: flex; gap: 1rem; flex-wrap: wrap; position: relative; z-index: 1; }
+
+    /* ─── CATÁLOGO ─── */
+    .catalog { background: var(--gray-50); }
+    .cat-block { margin-top: 4.5rem; }
+    .cat-block:first-of-type { margin-top: 3rem; }
+    .cat-head { display: flex; align-items: center; gap: 1.2rem; margin-bottom: 2rem; }
+    .cat-num {
+      font-family: var(--font-display); font-size: 1.1rem; font-weight: 700;
+      color: var(--navy); background: var(--amber);
+      width: 46px; height: 46px; border-radius: 10px;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .cat-title {
+      font-family: var(--font-display); font-size: clamp(1.3rem, 2.2vw, 1.8rem);
+      font-weight: 600; color: var(--text-dark); letter-spacing: -0.01em;
+    }
+    .cat-line { flex: 1; height: 1px; background: var(--gray-200); }
+
+    .prod {
+      background: var(--white); border: 1px solid var(--gray-100); border-radius: 14px;
+      overflow: hidden; margin-bottom: 1.8rem;
+      display: grid; grid-template-columns: 0.85fr 1.15fr;
+      transition: box-shadow 0.4s var(--ease-power), border-color 0.4s;
+    }
+    .prod:hover { box-shadow: 0 18px 50px rgba(15,25,35,0.09); border-color: var(--gray-200); }
+    .prod-media { position: relative; background: var(--navy); min-height: 320px; display: flex; }
+    .prod-media img {
+      width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0;
+    }
+    .prod-media-badge {
+      position: absolute; top: 1rem; left: 1rem; z-index: 2;
+      font-family: var(--font-display); font-size: 0.62rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase; color: var(--navy);
+      background: var(--amber); padding: 0.4rem 0.8rem; border-radius: 5px;
+    }
+    .prod-body { padding: 2rem 2.2rem; }
+    .prod-name {
+      font-family: var(--font-display); font-size: 1.3rem; font-weight: 600;
+      color: var(--text-dark); letter-spacing: -0.01em; margin-bottom: 0.7rem;
+    }
+    .prod-meta { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; }
+    .prod-chip {
+      font-family: var(--font-body); font-size: 0.72rem; font-weight: 500;
+      padding: 0.35rem 0.7rem; border-radius: 5px;
+      background: var(--gray-50); border: 1px solid var(--gray-100); color: var(--text-muted);
+    }
+    .prod-chip b { color: var(--text-dark); font-weight: 600; }
+    .prod-summary {
+      font-family: var(--font-body); font-size: 0.92rem; font-weight: 300;
+      line-height: 1.65; color: var(--text-body); margin-bottom: 1.4rem;
+    }
+    .spec-table { width: 100%; border-collapse: collapse; margin-bottom: 1.4rem; font-size: 0.84rem; }
+    .spec-table th, .spec-table td {
+      text-align: left; padding: 0.6rem 0.8rem; border: 1px solid var(--gray-100);
+      vertical-align: top; line-height: 1.5;
+    }
+    .spec-table th {
+      font-family: var(--font-display); font-weight: 600; color: var(--text-dark);
+      background: var(--gray-50); width: 38%; white-space: nowrap;
+    }
+    .spec-table td { color: var(--text-muted); }
+    .prod-benefits { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 1.4rem; }
+    .prod-benefits li {
+      display: flex; gap: 0.6rem; font-family: var(--font-body);
+      font-size: 0.86rem; line-height: 1.55; color: var(--text-body);
+    }
+    .prod-benefits li svg { width: 16px; height: 16px; color: var(--amber); flex-shrink: 0; margin-top: 3px; }
+    .prod-benefits li b { color: var(--text-dark); font-weight: 600; }
+    .prod-desc {
+      font-family: var(--font-body); font-size: 0.86rem; font-weight: 300;
+      line-height: 1.7; color: var(--text-muted);
+      padding: 1rem 1.2rem; background: var(--gray-50);
+      border-left: 3px solid var(--amber); border-radius: 0 8px 8px 0; margin-bottom: 1.4rem;
+    }
+    .prod-desc b { color: var(--text-dark); font-weight: 600; }
+    .prod-variations { margin-bottom: 1.4rem; }
+    .prod-variations summary {
+      cursor: pointer; font-family: var(--font-display); font-size: 0.82rem; font-weight: 600;
+      color: var(--navy); padding: 0.7rem 1rem; background: var(--amber-pale);
+      border-radius: 8px; list-style: none; display: flex; align-items: center; gap: 0.5rem;
+    }
+    .prod-variations summary::-webkit-details-marker { display: none; }
+    .prod-variations summary::before { content: '+'; font-size: 1.1rem; color: var(--amber); }
+    .prod-variations[open] summary::before { content: '−'; }
+    .var-table { width: 100%; border-collapse: collapse; margin-top: 0.8rem; font-size: 0.8rem; }
+    .var-table th, .var-table td { padding: 0.5rem 0.7rem; border: 1px solid var(--gray-100); text-align: left; }
+    .var-table th { background: var(--navy); color: var(--white); font-family: var(--font-display); font-weight: 600; font-size: 0.72rem; letter-spacing: 0.04em; }
+    .var-table td { color: var(--text-muted); }
+    .var-table tr:nth-child(even) td { background: var(--gray-50); }
+    .prod-actions { display: flex; gap: 0.8rem; flex-wrap: wrap; }
+    .btn-quote {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-family: var(--font-display); font-size: 0.82rem; font-weight: 600;
+      padding: 0.75rem 1.4rem; background: var(--amber); color: var(--navy);
+      border-radius: 7px; transition: all 0.3s var(--ease-power);
+    }
+    .btn-quote:hover { background: var(--amber-light); transform: translateY(-1px); box-shadow: 0 6px 18px rgba(212,149,42,0.3); }
+    .btn-quote svg { width: 16px; height: 16px; }
+    .btn-sheet {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-family: var(--font-display); font-size: 0.82rem; font-weight: 500;
+      padding: 0.75rem 1.3rem; color: var(--navy);
+      border: 1.5px solid var(--gray-200); border-radius: 7px;
+      transition: all 0.3s var(--ease-power);
+    }
+    .btn-sheet:hover { border-color: var(--amber); color: var(--amber); background: var(--amber-pale); }
+    .btn-sheet svg { width: 16px; height: 16px; }
+
+    /* ─── STEPS (¿Cómo comprar?) ─── */
+    .steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 3.5rem; }
+    .step-card {
+      background: var(--white); border: 1px solid var(--gray-100);
+      border-radius: 12px; padding: 2rem 1.6rem; position: relative;
+      transition: all 0.4s var(--ease-power);
+    }
+    .step-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(15,25,35,0.08); border-color: var(--amber); }
+    .step-num {
+      font-family: var(--font-display); font-size: 2.4rem; font-weight: 700;
+      color: var(--amber-pale); line-height: 1; margin-bottom: 0.6rem;
+      -webkit-text-stroke: 1px var(--amber);
+    }
+    .step-title {
+      font-family: var(--font-display); font-size: 1.05rem; font-weight: 600;
+      color: var(--text-dark); margin-bottom: 0.5rem;
+    }
+    .step-text {
+      font-family: var(--font-body); font-size: 0.86rem; font-weight: 300;
+      line-height: 1.65; color: var(--text-muted);
+    }
+
+    /* ─── REQUERIMIENTOS ESPECIALES ─── */
+    .special { background: var(--navy); color: var(--white); position: relative; overflow: hidden; }
+    .special::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 80% 20%, rgba(212,149,42,0.1), transparent 55%);
+    }
+    .special-inner { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+    .special .section-title { color: var(--white); }
+    .special .section-label::before { background: var(--amber); }
+    .special-lead {
+      font-family: var(--font-body); font-size: 1.05rem; font-weight: 300;
+      line-height: 1.75; color: var(--steel-pale); margin: 1.2rem 0 2rem;
+    }
+    .special-lead b { color: var(--amber); font-weight: 600; }
+    .special-points { display: flex; flex-direction: column; gap: 1.4rem; }
+    .special-point { display: flex; gap: 1rem; }
+    .special-point-icon {
+      width: 44px; height: 44px; border-radius: 10px; flex-shrink: 0;
+      background: rgba(212,149,42,0.12); display: flex; align-items: center; justify-content: center;
+    }
+    .special-point-icon svg { width: 22px; height: 22px; color: var(--amber); }
+    .special-point h4 { font-family: var(--font-display); font-size: 1rem; font-weight: 600; color: var(--white); margin-bottom: 0.3rem; }
+    .special-point p { font-family: var(--font-body); font-size: 0.88rem; font-weight: 300; line-height: 1.6; color: var(--steel-pale); }
+
+    /* ─── FAQ ─── */
+    .faq { background: var(--white); }
+    .faq-list { max-width: 820px; margin: 3rem auto 0; display: flex; flex-direction: column; gap: 0.9rem; }
+    .faq-item { border: 1px solid var(--gray-100); border-radius: 10px; overflow: hidden; background: var(--white); transition: border-color 0.3s; }
+    .faq-item[open] { border-color: var(--amber); }
+    .faq-item summary {
+      cursor: pointer; list-style: none; padding: 1.3rem 1.6rem;
+      font-family: var(--font-display); font-size: 0.98rem; font-weight: 600;
+      color: var(--text-dark); display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      content: '+'; font-size: 1.4rem; color: var(--amber); flex-shrink: 0;
+      transition: transform 0.3s; line-height: 1;
+    }
+    .faq-item[open] summary::after { content: '−'; }
+    .faq-item p {
+      padding: 0 1.6rem 1.4rem; font-family: var(--font-body);
+      font-size: 0.9rem; font-weight: 300; line-height: 1.7; color: var(--text-muted);
+    }
+
+    /* ─── FOOTER EXTRAS ─── */
+    .footer-contact-list { list-style: none; display: flex; flex-direction: column; gap: 0.8rem; }
+    .footer-contact-list li { display: flex; align-items: flex-start; gap: 0.6rem; font-family: var(--font-body); font-size: 0.83rem; font-weight: 300; color: var(--steel-light); line-height: 1.5; }
+    .footer-contact-list li svg { width: 15px; height: 15px; color: var(--amber); flex-shrink: 0; margin-top: 2px; }
+    .footer-contact-list li a { color: var(--steel-light); transition: color 0.3s; }
+    .footer-contact-list li a:hover { color: var(--amber); }
+    .footer-contact-list li b { color: var(--white); font-weight: 500; font-family: var(--font-display); display: block; font-size: 0.72rem; letter-spacing: 0.04em; margin-bottom: 1px; }
+    .footer-shipping {
+      max-width: 1240px; margin: 0 auto; padding: 1.5rem 2rem;
+      display: flex; gap: 2.5rem; flex-wrap: wrap;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    .footer-ship-item { display: flex; align-items: center; gap: 0.6rem; font-family: var(--font-body); font-size: 0.8rem; font-weight: 300; color: var(--steel-light); }
+    .footer-ship-item svg { width: 16px; height: 16px; color: var(--amber); flex-shrink: 0; }
+    .footer-ship-item b { color: var(--white); font-weight: 500; }
+
+    @media (max-width: 1024px) {
+      .about-lead { grid-template-columns: 1fr; gap: 2.5rem; }
+      .mv-grid { grid-template-columns: 1fr; }
+      .prod { grid-template-columns: 1fr; }
+      .prod-media { min-height: 240px; }
+      .steps-grid { grid-template-columns: repeat(2, 1fr); }
+      .special-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+    }
+    @media (max-width: 768px) {
+      .nav-wa { display: none; }
+      .steps-grid { grid-template-columns: 1fr; }
+      .brands-row { gap: 1.5rem 2rem; }
+      .brand-name { font-size: 1rem; }
+      .about-cta { padding: 2rem 1.5rem; }
+      .prod-body { padding: 1.5rem; }
+      .spec-table th { white-space: normal; }
+    }
   </style>
 </head>
 <body>
@@ -855,7 +1179,7 @@
       <div class="topbar-left">
         <div class="topbar-item">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-          <span>+507 6921-2056</span>
+          <span>+507 398-6559</span>
         </div>
         <div class="topbar-item">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
@@ -883,14 +1207,24 @@
         <span class="nav-brand-text">CONSULTORES <span>PB</span></span>
       </a>
       <div class="nav-links">
-        <a href="#inicio">Inicio</a>
-        <a href="#nosotros">La Empresa</a>
-        <a href="#servicios">Servicios</a>
-        <a href="#sectores">Sectores</a>
-        <a href="#productos">Productos</a>
+        <div class="nav-item">
+          <a href="#catalogo">Cat&aacute;logo</a>
+          <div class="nav-dropdown">
+            <a href="#cat-consumibles"><span class="dd-num">01</span> Consumibles e Insumos Industriales</a>
+            <a href="#cat-corte"><span class="dd-num">02</span> Herramientas de Corte y Mecanizado</a>
+            <a href="#cat-electricas"><span class="dd-num">03</span> Equipos y Herramientas El&eacute;ctricas</a>
+            <a href="#cat-estructurales"><span class="dd-num">04</span> Soluciones Estructurales y Fluidos</a>
+          </div>
+        </div>
+        <a href="#nosotros">Nosotros</a>
         <a href="#contacto">Contacto</a>
       </div>
-      <a href="#contacto" class="nav-cta">Solicitar Asesor&iacute;a</a>
+      <div class="nav-actions">
+        <a href="#contacto" class="nav-cta">Solicitar Cotizaci&oacute;n</a>
+        <a href="https://wa.me/50769212056" target="_blank" class="nav-wa" aria-label="Cotizar por WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+      </div>
       <div class="nav-hamburger" id="hamburger" onclick="toggleMobile()">
         <span></span><span></span><span></span>
       </div>
@@ -899,13 +1233,11 @@
 
   <!-- MOBILE NAV -->
   <div class="mobile-nav" id="mobileNav">
-    <a href="#inicio" onclick="closeMobile()">Inicio</a>
-    <a href="#nosotros" onclick="closeMobile()">La Empresa</a>
-    <a href="#servicios" onclick="closeMobile()">Servicios</a>
-    <a href="#sectores" onclick="closeMobile()">Sectores</a>
-    <a href="#productos" onclick="closeMobile()">Productos</a>
+    <a href="#catalogo" onclick="closeMobile()">Cat&aacute;logo</a>
+    <a href="#nosotros" onclick="closeMobile()">Nosotros</a>
+    <a href="#como-comprar" onclick="closeMobile()">&iquest;C&oacute;mo comprar?</a>
     <a href="#contacto" onclick="closeMobile()">Contacto</a>
-    <a href="#contacto" class="nav-cta" onclick="closeMobile()">Solicitar Asesor&iacute;a</a>
+    <a href="#contacto" class="nav-cta" onclick="closeMobile()">Solicitar Cotizaci&oacute;n</a>
   </div>
 
   <!-- HERO -->
@@ -919,24 +1251,24 @@
       <div class="hero-left">
         <div class="hero-badge">
           <span class="hero-badge-dot"></span>
-          Soluciones industriales en Panam&aacute;
+          Suministro e Importaci&oacute;n Industrial B2B
         </div>
         <h1 class="hero-title">
-          Asesor&iacute;a t&eacute;cnica<br>
-          para la <span class="accent">industria</span><br>
-          que avanza
+          Tu aliado estrat&eacute;gico<br>
+          en <span class="accent">suministro</span><br>
+          industrial
         </h1>
         <p class="hero-desc">
-          Apoyamos a empresas industriales en la selecci&oacute;n, adquisici&oacute;n y suministro de maquinaria, herramientas y consumibles especializados.
+          El canal directo entre las f&aacute;bricas l&iacute;deres a nivel global y las operaciones que mueven al mundo. Consumibles, herramientas de corte, equipos y soluciones estructurales desde el Hub de las Am&eacute;ricas.
         </p>
         <div class="hero-actions">
-          <a href="https://wa.me/50769212056" target="_blank" class="btn-primary">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            Contactar por WhatsApp
+          <a href="#catalogo" class="btn-primary">
+            Explorar Cat&aacute;logo
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
-          <a href="#servicios" class="btn-ghost">
-            Conocer Servicios
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          <a href="https://wa.me/50769212056" target="_blank" class="btn-ghost">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Cotizar por WhatsApp
           </a>
         </div>
       </div>
@@ -978,6 +1310,21 @@
     </div>
   </section>
 
+  <!-- BRANDS -->
+  <div class="brands">
+    <div class="brands-inner">
+      <div class="brands-label">Distribuimos marcas globales reconocidas</div>
+      <div class="brands-row">
+        <span class="brand-name">DeWalt</span>
+        <span class="brand-name">Nitto Kohki</span>
+        <span class="brand-name">Drill America</span>
+        <span class="brand-name">Hougen</span>
+        <span class="brand-name">Accu-Lube</span>
+        <span class="brand-name">W&uuml;rth</span>
+      </div>
+    </div>
+  </div>
+
   <!-- TRUST BAR -->
   <div class="trust-bar">
     <div class="trust-inner">
@@ -1011,245 +1358,665 @@
     </div>
   </div>
 
-  <!-- ABOUT -->
+  <!-- NOSOTROS -->
   <section class="about" id="nosotros">
     <div class="container">
-      <div class="about-grid">
-        <div class="about-image-stack rv">
-          <div class="about-img-main">
-            <img src="https://images.unsplash.com/photo-1652888510609-ed2d2ad64d6b?w=800&q=80" alt="Consultores PB - Maquinaria CNC" loading="lazy">
+      <div class="services-header" style="text-align:left; margin-bottom:3.5rem; max-width:760px;">
+        <div class="section-label rv">Nosotros: Consultores PB</div>
+        <h2 class="section-title rv rv-d1">Tu Aliado Estrat&eacute;gico en<br><span class="accent">Suministro e Importaci&oacute;n Industrial</span></h2>
+      </div>
+
+      <div class="about-lead">
+        <div class="about-lead-copy rv rv-d1">
+          <p>
+            En <strong>Consultores PB</strong>, nos dedicamos a mantener la continuidad operativa de tu empresa, taller o proyecto. Nacimos en Panam&aacute; con una visi&oacute;n clara: simplificar la cadena de suministro industrial eliminando intermediarios innecesarios. No somos solo un proveedor; somos el canal directo entre las f&aacute;bricas l&iacute;deres a nivel global y las operaciones que mueven al mundo.
+          </p>
+          <p>
+            Nos especializamos en la comercializaci&oacute;n y distribuci&oacute;n de insumos cr&iacute;ticos de alta rotaci&oacute;n, herramientas de corte de alta producci&oacute;n, componentes de automatizaci&oacute;n y equipos pesados. Gracias a nuestra ubicaci&oacute;n en el <strong>Hub de las Am&eacute;ricas</strong>, garantizamos soluciones log&iacute;sticas eficientes con cobertura de env&iacute;o tanto en todo el territorio paname&ntilde;o como a mercados internacionales.
+          </p>
+        </div>
+
+        <div class="pillars rv rv-d2">
+          <div class="pillar">
+            <div class="pillar-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+            </div>
+            <div>
+              <div class="pillar-title">Abastecimiento Integral B2B</div>
+              <div class="pillar-text">Desde granalla de acero premium y lubricantes biodegradables especializados hasta partes electr&oacute;nicas complejas. Si tu operaci&oacute;n lo necesita, nosotros lo suministramos o lo gestionamos a medida.</div>
+            </div>
           </div>
-          <div class="about-img-accent">
-            <img src="https://images.unsplash.com/photo-1738918935719-398c6cc3c51a?w=400&q=80" alt="Herramientas industriales en taller" loading="lazy">
+          <div class="pillar">
+            <div class="pillar-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+            </div>
+            <div>
+              <div class="pillar-title">Log&iacute;stica sin Fronteras</div>
+              <div class="pillar-text">Rompemos las barreras geogr&aacute;ficas. Dise&ntilde;amos soluciones de despacho con entregas r&aacute;pidas a nivel nacional y servicios de exportaci&oacute;n eficientes para atender requerimientos a nivel internacional.</div>
+            </div>
           </div>
-          <div class="about-counter">
-            <div class="about-counter-num">5+</div>
-            <div class="about-counter-label">Sectores Industriales</div>
+          <div class="pillar">
+            <div class="pillar-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+            </div>
+            <div>
+              <div class="pillar-title">Respaldo y Calidad Certificada</div>
+              <div class="pillar-text">Trabajamos de la mano con marcas globales reconocidas y productos que cumplen con estrictas normativas internacionales, asegurando el rendimiento de tu inversi&oacute;n.</div>
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.663 17h4.673M12 3v1M12 17.5V21M6.34 6.34l.7.7M17.66 6.34l-.7.7M4 12H3M21 12h-1M8 14a5 5 0 118 0c0 1.5-1 2.5-1.5 3.5H9.5C9 16.5 8 15.5 8 14z"/></svg>
+            </div>
+            <div>
+              <div class="pillar-title">Asesor&iacute;a T&eacute;cnica Especializada</div>
+              <div class="pillar-text">Entendemos el lenguaje t&eacute;cnico de la industria. Te ayudamos a elegir el inserto exacto, el tipo de broca (cono morse, refrigeraci&oacute;n interna) o la dosificaci&oacute;n de fibra adecuada para optimizar tus procesos productivos.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mv-grid">
+        <div class="mv-card rv rv-d2">
+          <div class="mv-card-label">Nuestra Misi&oacute;n</div>
+          <p class="mv-card-text">Proveer de manera &aacute;gil y confiable insumos, herramientas y componentes industriales de la m&aacute;s alta calidad, impulsando la eficiencia, la seguridad y la rentabilidad de las operaciones de nuestros clientes en Panam&aacute; y el mundo.</p>
+        </div>
+        <div class="mv-card vision rv rv-d3">
+          <div class="mv-card-label">Nuestra Visi&oacute;n</div>
+          <p class="mv-card-text">Consolidarnos como la plataforma de suministro industrial B2B l&iacute;der en la regi&oacute;n, reconocida por nuestra capacidad de respuesta, cat&aacute;logo especializado de vanguardia y excelencia log&iacute;stica internacional.</p>
+        </div>
+      </div>
+
+      <div class="about-cta rv rv-d2">
+        <div class="about-cta-title">&iquest;Listo para optimizar tus costos de operaci&oacute;n?</div>
+        <div class="about-cta-actions">
+          <a href="#catalogo" class="btn-primary">
+            Explora Nuestro Cat&aacute;logo
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#contacto" class="btn-ghost">Solicitar Cotizaci&oacute;n de Volumen</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATÁLOGO -->
+  <section class="catalog" id="catalogo">
+    <div class="container">
+      <div class="products-header" style="text-align:center; max-width:760px; margin:0 auto;">
+        <div class="section-label rv" style="justify-content:center;">Catálogo Maestro</div>
+        <h2 class="section-title rv rv-d1">Todo lo que tu operación<br><span class="accent">necesita, en un solo canal</span></h2>
+        <p class="section-subtitle rv rv-d2" style="margin-left:auto; margin-right:auto;">Cuatro líneas especializadas de suministro industrial B2B. Cada producto incluye su ficha técnica descargable y cotización directa por WhatsApp.</p>
+      </div>
+
+      <!-- CATEGORÍA 1 -->
+      <div class="cat-block" id="cat-consumibles">
+        <div class="cat-head rv">
+          <span class="cat-num">01</span>
+          <h3 class="cat-title">Consumibles e Insumos Industriales</h3>
+          <span class="cat-line"></span>
+        </div>
+
+        <!-- Granalla Steel Shot -->
+        <div class="prod rv">
+          <div class="prod-media">
+            <span class="prod-media-badge">Consumibles</span>
+            <img src="assets/productos/steel-shot-s390.jpg" alt="Granalla de Acero Steel Shot S-390 Amasteel" loading="lazy">
+          </div>
+          <div class="prod-body">
+            <h4 class="prod-name">Granalla de Acero Steel Shot S-390 (Amasteel)</h4>
+            <div class="prod-meta">
+              <span class="prod-chip"><b>SKU:</b> GRA-AM-S390</span>
+              <span class="prod-chip"><b>Disponibilidad:</b> En stock (Bolsas / Pallets)</span>
+            </div>
+            <p class="prod-summary">Abrasivo premium de acero de alta durabilidad para la preparación óptima de superficies y remoción agresiva de óxido.</p>
+            <table class="spec-table">
+              <tr><th>Marca</th><td>Amasteel (Ervin Industries)</td></tr>
+              <tr><th>Modelo / Tamaño</th><td>Steel Shot S-390</td></tr>
+              <tr><th>Normativas</th><td>Clasificación exacta bajo normas internacionales SAE J444 y J827</td></tr>
+              <tr><th>Presentación</th><td>Bolsas de 50 lbs dispuestas en pallets industriales de 35"x35"</td></tr>
+              <tr><th>Capacidad de Despacho</th><td>Pallets de 2,000 lbs (1 Tonelada corta) para compras por volumen</td></tr>
+            </table>
+            <ul class="prod-benefits">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span><b>Costo-Beneficio Insuperable:</b> Resistente a múltiples ciclos de impacto continuo reduciendo el consumo de material.</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span><b>Perfil de Anclaje Homogéneo:</b> Garantiza una adherencia perfecta para la aplicación posterior de pinturas o recubrimientos industriales.</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span><b>Cuidado del Equipo:</b> Calidad certificada que mitiga el desgaste prematuro de las turbinas y boquillas de granallado.</span></li>
+            </ul>
+            <p class="prod-desc"><b>Descripción:</b> Diseñada para operaciones críticas de tratamiento superficial en fundiciones, astilleros y talleres de estructuras. Su dureza controlada remueve cascarilla de laminación, óxido y contaminantes difíciles con la máxima rapidez operativa.</p>
+            <div class="prod-actions">
+              <a href="https://wa.me/50769212056?text=Hola,%20quiero%20cotizar%20la%20Granalla%20de%20Acero%20Steel%20Shot%20S-390%20(SKU%20GRA-AM-S390)." target="_blank" class="btn-quote"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>Solicitar Cotización</a>
+              <a href="assets/fichas/ficha-steel-shot.pdf" target="_blank" class="btn-sheet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg>Ficha Técnica</a>
+            </div>
           </div>
         </div>
 
-        <div class="about-text">
-          <div class="section-label rv rv-d1">Sobre Nosotros</div>
-          <h2 class="section-title rv rv-d2">Su aliado estrat&eacute;gico<br>en el <span class="accent">sector industrial</span></h2>
-          <p class="section-subtitle rv rv-d3">
-            Consultores PB es una empresa dedicada a brindar asesor&iacute;a t&eacute;cnica y soluciones para el sector industrial, apoyando a empresas en la selecci&oacute;n, adquisici&oacute;n y suministro de maquinaria, herramientas y consumibles especializados.
-          </p>
-          <div class="about-values">
-            <div class="about-value rv rv-d4">
-              <div class="about-value-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-              </div>
-              <span>Orientaci&oacute;n t&eacute;cnica y acompa&ntilde;amiento para decisiones informadas y eficientes</span>
+        <!-- Markal -->
+        <div class="prod rv">
+          <div class="prod-media">
+            <span class="prod-media-badge">Consumibles</span>
+            <img src="assets/productos/markal.jpg" alt="Marcador de Pintura Líquida Markal" loading="lazy">
+          </div>
+          <div class="prod-body">
+            <h4 class="prod-name">Marcador de Pintura Líquida Industrial – Markal®</h4>
+            <div class="prod-meta">
+              <span class="prod-chip"><b>SKU:</b> MK-PM-WH12</span>
+              <span class="prod-chip"><b>Disponibilidad:</b> Cajas de 12 unidades</span>
             </div>
-            <div class="about-value rv rv-d5">
-              <div class="about-value-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-              </div>
-              <span>Acceso a equipos y soluciones t&eacute;cnicas confiables que mejoran la productividad</span>
-            </div>
-            <div class="about-value rv rv-d6">
-              <div class="about-value-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-              </div>
-              <span>Respaldo profesional con enfoque en eficiencia operativa y continuidad</span>
+            <p class="prod-summary">Marcadores de pintura líquida real y permanente de secado rápido, ideales para la identificación y codificación de materiales en entornos rudos.</p>
+            <table class="spec-table">
+              <tr><th>Marca</th><td>Markal®</td></tr>
+              <tr><th>Color de Pintura</th><td>Blanco (Alta visibilidad y contraste)</td></tr>
+              <tr><th>Fórmula Química</th><td>Pintura líquida permanente libre de xileno para la seguridad del operador</td></tr>
+              <tr><th>Superficies Aptas</th><td>Metales (oxidados, rugosos, limpios o aceitosos), concreto, madera y goma</td></tr>
+              <tr><th>Resistencia</th><td>Alta durabilidad ante la intemperie y la degradación por rayos UV</td></tr>
+            </table>
+            <ul class="prod-benefits">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span><b>Penetración Eficiente:</b> Marca de forma nítida incluso sobre capas delgadas de aceite, grasa o humedad.</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span><b>Punta de Alta Durabilidad:</b> Mecanismo de válvula de flujo controlado que dosifica la pintura de manera uniforme sin chorrear.</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span><b>Permanencia Absoluta:</b> Las marcas no se borran, desvanecen ni se descascaran durante el traslado logístico.</span></li>
+            </ul>
+            <p class="prod-desc"><b>Descripción:</b> El estándar global para la codificación e identificación en talleres de soldadura y habilitado de acero. Facilita trazos precisos de líneas de corte, ensamblaje o números de colada que permanecen visibles bajo las condiciones ambientales más exigentes.</p>
+            <div class="prod-actions">
+              <a href="https://wa.me/50769212056?text=Hola,%20quiero%20cotizar%20el%20Marcador%20de%20Pintura%20Markal%20(SKU%20MK-PM-WH12)." target="_blank" class="btn-quote"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>Solicitar Cotización</a>
+              <a href="assets/fichas/ficha-markal.pdf" target="_blank" class="btn-sheet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg>Ficha Técnica</a>
             </div>
           </div>
-          <a href="#contacto" class="btn-primary rv rv-d6">
-            Conocer M&aacute;s
+        </div>
+
+        <!-- Discos Firecut Würth -->
+        <div class="prod rv">
+          <div class="prod-media">
+            <span class="prod-media-badge">Consumibles</span>
+            <img src="assets/productos/discos-corte-wurth.png" alt="Discos de Corte y Desbaste Firecut Würth" loading="lazy">
+          </div>
+          <div class="prod-body">
+            <h4 class="prod-name">Discos de Corte y Desbaste Firecut – Würth</h4>
+            <div class="prod-meta">
+              <span class="prod-chip"><b>SKU:</b> WR-DF-FC115</span>
+              <span class="prod-chip"><b>Disponibilidad:</b> En stock</span>
+            </div>
+            <p class="prod-summary">Discos abrasivos aglomerados de alto desempeño para cortes limpios y molienda segura en metales ferrosos y acero inoxidable.</p>
+            <table class="spec-table">
+              <tr><th>Marca</th><td>Würth</td></tr>
+              <tr><th>Línea</th><td>Firecut</td></tr>
+              <tr><th>Medidas Disponibles</th><td>Corte: 115 × 1.0 × 22 mm / Desbaste: 115 × 6.0 × 22 mm y 180 × 3.0 × 22 mm</td></tr>
+              <tr><th>Discos Flap de Acero</th><td>Diámetro 4 1/2" x 7/8" (115 × 22.23 mm)</td></tr>
+              <tr><th>Accesorios de Limpieza</th><td>Cepillos de alambre trenzado anudado de 3" y 4 1/2" con eje roscado de 5/8"</td></tr>
+            </table>
+            <ul class="prod-benefits">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span><b>Corte Ultra Rápido:</b> Espesor optimizado en los discos de corte para menor pérdida de material y mínima rebaba.</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span><b>Seguridad Estructural:</b> Mallas de fibra de vidrio de alta resistencia que previenen fracturas del disco a altas RPM.</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span><b>Acabado Profesional:</b> Los discos Flap ofrecen un desbaste controlado y pulido uniforme en cordones de soldadura.</span></li>
+            </ul>
+            <p class="prod-desc"><b>Descripción:</b> Insumos de alto rendimiento para el trabajo diario con amoladoras en herrería pesada y pailería. Perfectos para remover escoria, limpiar impurezas mediante los cepillos de alambre trenzado y asegurar un acabado limpio y libre de contaminantes en soldaduras de acero.</p>
+            <div class="prod-actions">
+              <a href="https://wa.me/50769212056?text=Hola,%20quiero%20cotizar%20los%20Discos%20de%20Corte%20Firecut%20W%C3%BCrth%20(SKU%20WR-DF-FC115)." target="_blank" class="btn-quote"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>Solicitar Cotización</a>
+              <a href="assets/fichas/ficha-discos-wurth.pdf" target="_blank" class="btn-sheet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg>Ficha Técnica</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CATEGORÍA 2 -->
+      <div class="cat-block" id="cat-corte">
+        <div class="cat-head rv">
+          <span class="cat-num">02</span>
+          <h3 class="cat-title">Herramientas de Corte y Mecanizado</h3>
+          <span class="cat-line"></span>
+        </div>
+
+        <!-- Cortadores Anulares -->
+        <div class="prod rv">
+          <div class="prod-media">
+            <span class="prod-media-badge">Corte</span>
+            <img src="assets/productos/cortadores-anulares.jpg" alt="Cortadores Anulares Hougen Drill America" loading="lazy">
+          </div>
+          <div class="prod-body">
+            <h4 class="prod-name">Cortadores Anulares (Hougen / Drill America)</h4>
+            <div class="prod-meta">
+              <span class="prod-chip"><b>SKU:</b> HC-CA-WELDON</span>
+              <span class="prod-chip"><b>Disponibilidad:</b> Variedad de diámetros</span>
+            </div>
+            <p class="prod-summary">Herramientas de corte cilíndrico hueco diseñadas para perforaciones masivas en metales a velocidades muy superiores a las brocas sólidas.</p>
+            <table class="spec-table">
+              <tr><th>Marcas</th><td>Hougen / Drill America</td></tr>
+              <tr><th>Material</th><td>Acero de Alta Velocidad (HSS) / Dientes con Carburo de Tungsteno (TCT)</td></tr>
+              <tr><th>Zanco / Encastre</th><td>Tipo Weldon estándar de 3/4" (Universal para taladros magnéticos)</td></tr>
+              <tr><th>Profundidades de Corte</th><td>Longitudes estándar de alcance de 1", 2" y 3"</td></tr>
+              <tr><th>Geometría</th><td>Filos alternos rectificados para una expulsión automatizada del núcleo</td></tr>
+            </table>
+            <ul class="prod-benefits">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span><b>Ahorro de Tiempo:</b> Perforaciones hasta 3 veces más rápidas al cortar únicamente el perímetro del círculo.</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span><b>Menor Esfuerzo Motriz:</b> Reduce la carga de torsión y desgaste del motor de tus herramientas eléctricas.</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span><b>Calidad del Barreno:</b> Orificios concéntricos perfectos, cilíndricos y libres de rebabas desde el primer pase.</span></li>
+            </ul>
+            <p class="prod-desc"><b>Descripción:</b> Ideales para montajes en taladros magnéticos industriales. Su diseño geométrico permite que el núcleo metálico (slug) sea expulsado de manera automática mediante el pin piloto al finalizar la perforación, asegurando ciclos de trabajo continuos.</p>
+            <details class="prod-variations">
+              <summary>Ver variaciones disponibles — Brocas Anulares (Profundidad 2", HSS)</summary>
+              <table class="var-table">
+                <tr><th>Diámetro</th><th>Aplicación principal</th></tr>
+                <tr><td>9/16"</td><td>Perforaciones en estructuras ligeras</td></tr>
+                <tr><td>11/16"</td><td>Uso general en carpintería metálica</td></tr>
+                <tr><td>13/16"</td><td>Talleres mecánicos</td></tr>
+                <tr><td>15/16"</td><td>Acero estructural</td></tr>
+                <tr><td>1/2"</td><td>Planchas delgadas</td></tr>
+                <tr><td>5/8"</td><td>Aplicaciones múltiples</td></tr>
+                <tr><td>3/4"</td><td>Uso profesional</td></tr>
+                <tr><td>7/8"</td><td>Perforaciones estándar</td></tr>
+                <tr><td>1"</td><td>Construcción metálica</td></tr>
+                <tr><td>1-1/16"</td><td>Instalaciones industriales</td></tr>
+                <tr><td>1-1/8"</td><td>Carpintería metálica</td></tr>
+                <tr><td>1-1/4"</td><td>Herrería pesada</td></tr>
+                <tr><td>1-5/16"</td><td>Industria pesada</td></tr>
+                <tr><td>1-3/8"</td><td>Construcción estructural</td></tr>
+                <tr><td>1-9/16"</td><td>Estructuras metálicas complejas</td></tr>
+                <tr><td>1-5/8"</td><td>Perforaciones de gran diámetro</td></tr>
+                <tr><td>1-3/4"</td><td>Uso industrial intensivo</td></tr>
+              </table>
+            </details>
+            <div class="prod-actions">
+              <a href="https://wa.me/50769212056?text=Hola,%20quiero%20cotizar%20Cortadores%20Anulares%20(SKU%20HC-CA-WELDON)." target="_blank" class="btn-quote"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>Solicitar Cotización</a>
+              <a href="assets/fichas/ficha-cortadores-anulares.pdf" target="_blank" class="btn-sheet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg>Ficha Técnica</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Brocas Especializadas -->
+        <div class="prod rv">
+          <div class="prod-media">
+            <span class="prod-media-badge">Corte</span>
+            <img src="assets/productos/brocas-especializadas.jpg" alt="Brocas Industriales Especializadas Drill America" loading="lazy">
+          </div>
+          <div class="prod-body">
+            <h4 class="prod-name">Brocas Industriales Especializadas (Drill America)</h4>
+            <div class="prod-meta">
+              <span class="prod-chip"><b>SKU:</b> DA-BR-INDX</span>
+              <span class="prod-chip"><b>Disponibilidad:</b> En catálogo</span>
+            </div>
+            <p class="prod-summary">Brocas premium para trabajos de alta exigencia, disponibles en diseños de sujeción para alto torque y con sistemas de enfriamiento integrado.</p>
+            <table class="spec-table">
+              <tr><th>Marca</th><td>Drill America</td></tr>
+              <tr><th>Diseños Disponibles</th><td>Zanco Cono Morse (MT2, MT3, MT4) y Brocas con Canal de Refrigeración Interna</td></tr>
+              <tr><th>Material Base</th><td>Acero M2 de alta velocidad (HSS) / Aleaciones con Cobalto (M42)</td></tr>
+              <tr><th>Ángulo de Punta</th><td>Punta Split Point a 135° (Autocentrante de alta penetración)</td></tr>
+              <tr><th>Aplicación</th><td>Perforación profunda en aceros aleados, inoxidables y fundiciones duras</td></tr>
+            </table>
+            <ul class="prod-benefits">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span><b>Sujeción de Alto Torque:</b> El cono morse se bloquea mecánicamente en el husillo impidiendo deslizamientos bajo cargas críticas.</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span><b>Refrigeración en la Zona de Fricción:</b> Los canales internos dirigen el lubricante o aire al punto exacto de corte.</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span><b>Sin Desvíos:</b> La punta autocentrante corta al contacto, eliminando la necesidad de realizar un barreno piloto previo.</span></li>
+            </ul>
+            <p class="prod-desc"><b>Descripción:</b> Soluciones de ingeniería para taladros radiales, tornos y centros de mecanizado. Previenen de forma eficiente el endurecimiento por trabajo térmico en los materiales gracias a su excelente disipación del calor.</p>
+            <div class="prod-actions">
+              <a href="https://wa.me/50769212056?text=Hola,%20quiero%20cotizar%20Brocas%20Industriales%20Especializadas%20(SKU%20DA-BR-INDX)." target="_blank" class="btn-quote"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>Solicitar Cotización</a>
+              <a href="assets/fichas/ficha-brocas.pdf" target="_blank" class="btn-sheet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg>Ficha Técnica</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Insertos -->
+        <div class="prod rv">
+          <div class="prod-media">
+            <span class="prod-media-badge">Corte</span>
+            <img src="assets/productos/insertos.jpg" alt="Insertos de Carburo Intercambiables" loading="lazy">
+          </div>
+          <div class="prod-body">
+            <h4 class="prod-name">Insertos de Carburo Intercambiables</h4>
+            <div class="prod-meta">
+              <span class="prod-chip"><b>SKU:</b> INS-CB-ISO</span>
+              <span class="prod-chip"><b>Disponibilidad:</b> Geometrías estándar</span>
+            </div>
+            <p class="prod-summary">Pastillas indexables de carburo cementado con recubrimientos avanzados para operaciones automatizadas de torneado, fresado y roscado.</p>
+            <table class="spec-table">
+              <tr><th>Material</th><td>Carburo de Tungsteno Micrograno de alta dureza</td></tr>
+              <tr><th>Geometrías Comunes</th><td>Insertos romboides, triangulares, cuadrados y redondos (CNMG, WNMG, TNMG)</td></tr>
+              <tr><th>Recubrimientos</th><td>Capas de última generación aplicadas por CVD / PVD (Al2O3, TiCN, TiAlN)</td></tr>
+              <tr><th>Rompevirutas</th><td>Diseños integrados para el control eficiente de la viruta larga</td></tr>
+            </table>
+            <ul class="prod-benefits">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span><b>Alta Rentabilidad:</b> Múltiples filos de corte por pastilla; basta con girar el inserto en el portaherramientas para estrenar un filo.</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span><b>Resistencia Térmica:</b> Soporta velocidades de corte elevadas y altas temperaturas sin perder estabilidad dimensional.</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span><b>Acabados de Precisión:</b> Grados optimizados tanto para el desbaste pesado como para el superacabado liso de piezas.</span></li>
+            </ul>
+            <div class="prod-actions">
+              <a href="https://wa.me/50769212056?text=Hola,%20quiero%20cotizar%20Insertos%20de%20Carburo%20Intercambiables%20(SKU%20INS-CB-ISO)." target="_blank" class="btn-quote"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>Solicitar Cotización</a>
+              <a href="assets/fichas/ficha-insertos.pdf" target="_blank" class="btn-sheet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg>Ficha Técnica</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fresas de Carburo -->
+        <div class="prod rv">
+          <div class="prod-media">
+            <span class="prod-media-badge">Corte</span>
+            <img src="assets/productos/fresas-carburo.png" alt="Fresas de Carburo de Tungsteno Limas Rotativas" loading="lazy">
+          </div>
+          <div class="prod-body">
+            <h4 class="prod-name">Fresas de Carburo de Tungsteno (Limas Rotativas)</h4>
+            <div class="prod-meta">
+              <span class="prod-chip"><b>SKU:</b> HER-FC-ROT</span>
+              <span class="prod-chip"><b>Disponibilidad:</b> Tipos SB, SF, SC</span>
+            </div>
+            <p class="prod-summary">Limas rotativas de carburo sólido para motortools, diseñadas para la remoción rápida de material, desbaste de soldaduras y rebabeo estructural.</p>
+            <table class="spec-table">
+              <tr><th>Geometrías (Tipos)</th><td>Tipo SB (Cilíndrica con corte extremo) / Tipo SF (Árbol con punta redondeada) / Tipo SC (Cilíndrica bola)</td></tr>
+              <tr><th>Material</th><td>Cabeza de Carburo de Tungsteno soldada a zanco de acero templado</td></tr>
+              <tr><th>Tipo de Corte</th><td>Corte doble (Double Cut / Diamond Cut) para un control superior y virutas pequeñas</td></tr>
+              <tr><th>Diámetro de Zanco</th><td>Estándar de 1/4" compatible con amoladoras rectas industriales</td></tr>
+            </table>
+            <ul class="prod-benefits">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span><b>Remoción Agresiva:</b> Su patrón de corte doble corta rápidamente metales duros ferrosos y no ferrosos.</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span><b>Excelente Control:</b> Minimiza las vibraciones y los saltos bruscos de la herramienta, protegiendo las manos del operario.</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span><b>Larga Vida Útil:</b> El carburo retiene su filo extremo incluso trabajando sobre cordones de soldadura muy duros.</span></li>
+            </ul>
+            <div class="prod-actions">
+              <a href="https://wa.me/50769212056?text=Hola,%20quiero%20cotizar%20Fresas%20de%20Carburo%20de%20Tungsteno%20(SKU%20HER-FC-ROT)." target="_blank" class="btn-quote"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>Solicitar Cotización</a>
+              <a href="assets/fichas/ficha-fresas.pdf" target="_blank" class="btn-sheet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg>Ficha Técnica</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CATEGORÍA 3 -->
+      <div class="cat-block" id="cat-electricas">
+        <div class="cat-head rv">
+          <span class="cat-num">03</span>
+          <h3 class="cat-title">Equipos y Herramientas Eléctricas</h3>
+          <span class="cat-line"></span>
+        </div>
+
+        <!-- Taladros Magnéticos -->
+        <div class="prod rv">
+          <div class="prod-media">
+            <span class="prod-media-badge">Equipos</span>
+            <img src="assets/productos/taladro-magnetico-hougen.jpg" alt="Taladro Magnético Industrial Hougen Nitto Kohki" loading="lazy">
+          </div>
+          <div class="prod-body">
+            <h4 class="prod-name">Taladros Magnéticos Industriales (Hougen / Nitto Kohki)</h4>
+            <div class="prod-meta">
+              <span class="prod-chip"><b>SKU:</b> EQ-TM-PRO</span>
+              <span class="prod-chip"><b>Disponibilidad:</b> Bajo catálogo especializado</span>
+            </div>
+            <p class="prod-summary">Maquinaria de perforación portátil con bases electromagnéticas de alta potencia para fijación estructural segura en campo y talleres de montaje.</p>
+            <table class="spec-table">
+              <tr><th>Marcas Disponibles</th><td>Hougen / Nitto Kohki</td></tr>
+              <tr><th>Operación Logística</th><td>Unidades portátiles de alta resistencia al torque estructural</td></tr>
+              <tr><th>Sujeción de Seguridad</th><td>Base electromagnética integrada con sensores de monitoreo de adherencia</td></tr>
+              <tr><th>Enfoque de Operación</th><td>Optimizado para uso intensivo de cortadores anulares en obras de construcción</td></tr>
+              <tr><th>Alimentación</th><td>Modelos robustos en configuraciones de 110V y 220V</td></tr>
+            </table>
+            <ul class="prod-benefits">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span><b>Estabilidad Inmutable:</b> Fuerza magnética extrema que impide desviaciones o roturas de las herramientas de corte.</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span><b>Seguridad Operativa:</b> Apagado electrónico automático instantáneo en caso de pérdida de adherencia magnética sobre la viga.</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span><b>Alto Torque Comercial:</b> Relación de engranajes optimizada para barrenar grandes espesores de placa sin caídas de RPM.</span></li>
+            </ul>
+            <div class="prod-actions">
+              <a href="https://wa.me/50769212056?text=Hola,%20quiero%20cotizar%20un%20Taladro%20Magn%C3%A9tico%20Industrial%20(SKU%20EQ-TM-PRO)." target="_blank" class="btn-quote"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>Solicitar Cotización</a>
+              <a href="assets/fichas/ficha-taladros-magneticos.pdf" target="_blank" class="btn-sheet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg>Ficha Técnica</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Amoladora DeWalt -->
+        <div class="prod rv">
+          <div class="prod-media">
+            <span class="prod-media-badge">Equipos</span>
+            <img src="assets/productos/amoladora-dewalt.jpg" alt="Amoladora Recta Eléctrica Motortool DeWalt" loading="lazy">
+          </div>
+          <div class="prod-body">
+            <h4 class="prod-name">Amoladora Recta Eléctrica (Motortool) – DeWalt</h4>
+            <div class="prod-meta">
+              <span class="prod-chip"><b>SKU:</b> DW-MT-20X5</span>
+              <span class="prod-chip"><b>Disponibilidad:</b> En catálogo</span>
+            </div>
+            <p class="prod-summary">Amoladora recta de alta velocidad diseñada para trabajos de molienda y desbaste interno con un motor resistente a jornadas severas.</p>
+            <table class="spec-table">
+              <tr><th>Marca</th><td>DeWalt</td></tr>
+              <tr><th>Modelo base</th><td>Diseños rectos optimizados (Gama DeWalt 20X5)</td></tr>
+              <tr><th>Potencia del Motor</th><td>4.2 Amperios de alta eficiencia para uso continuo</td></tr>
+              <tr><th>Velocidad de Giro</th><td>Hasta 25,000 RPM constantes</td></tr>
+              <tr><th>Alimentación Eléctrica</th><td>Compatibilidad total CA/CC (corriente de red o generadores en campo)</td></tr>
+              <tr><th>Pinza de Sujeción</th><td>Boquilla de precisión de 1/4" con opción a reductor de 1/8"</td></tr>
+              <tr><th>Capacidad Molienda</th><td>Apto para ruedas y fresas de molienda de hasta 1-1/2"</td></tr>
+            </table>
+            <ul class="prod-benefits">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span><b>Trabajo en Campo Dinámico:</b> La versatilidad CA/CC permite conectarlo directo a motogeneradores o máquinas de soldar en obra.</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span><b>Diseño Ergonómico:</b> Interruptor tipo paleta con botón de bloqueo que reduce significativamente la fatiga en las manos.</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span><b>Alineación Concéntrica:</b> Pinza rectificada que elimina el cabeceo o vibración de las fresas de carburo.</span></li>
+            </ul>
+            <div class="prod-actions">
+              <a href="https://wa.me/50769212056?text=Hola,%20quiero%20cotizar%20la%20Amoladora%20Recta%20DeWalt%20(SKU%20DW-MT-20X5)." target="_blank" class="btn-quote"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>Solicitar Cotización</a>
+              <a href="assets/fichas/ficha-amoladora-dewalt.pdf" target="_blank" class="btn-sheet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg>Ficha Técnica</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Polipastos -->
+        <div class="prod rv">
+          <div class="prod-media">
+            <span class="prod-media-badge">Equipos</span>
+            <img src="assets/productos/polipastos.jpg" alt="Polipastos y Equipos de Elevación" loading="lazy">
+          </div>
+          <div class="prod-body">
+            <h4 class="prod-name">Polipastos y Equipos de Elevación</h4>
+            <div class="prod-meta">
+              <span class="prod-chip"><b>SKU:</b> EQ-PL-ELEV</span>
+              <span class="prod-chip"><b>Disponibilidad:</b> Capacidades variables bajo pedido</span>
+            </div>
+            <p class="prod-summary">Sistemas mecánicos y eléctricos robustos de elevación para cargas pesadas, diseñados bajo normativas de seguridad industrial.</p>
+            <p class="prod-desc"><b>Nota comercial:</b> Ideales para optimizar los flujos logísticos en talleres metalmecánicos, asegurando un levantamiento suave, frenos automáticos de seguridad y alta resistencia a la fatiga por cadena o cable.</p>
+            <div class="prod-actions">
+              <a href="https://wa.me/50769212056?text=Hola,%20quiero%20cotizar%20Polipastos%20y%20Equipos%20de%20Elevaci%C3%B3n%20(SKU%20EQ-PL-ELEV)." target="_blank" class="btn-quote"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>Solicitar Cotización</a>
+              <a href="assets/fichas/ficha-polipastos.pdf" target="_blank" class="btn-sheet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg>Ficha Técnica</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CATEGORÍA 4 -->
+      <div class="cat-block" id="cat-estructurales">
+        <div class="cat-head rv">
+          <span class="cat-num">04</span>
+          <h3 class="cat-title">Soluciones Estructurales y Fluidos MQL</h3>
+          <span class="cat-line"></span>
+        </div>
+
+        <!-- Accu-Lube -->
+        <div class="prod rv">
+          <div class="prod-media">
+            <span class="prod-media-badge">Fluidos MQL</span>
+            <img src="assets/productos/accu-lube-2000.jpg" alt="Lubricante Accu-Lube LB-2000" loading="lazy">
+          </div>
+          <div class="prod-body">
+            <h4 class="prod-name">Lubricante para Equipos de Corte (Accu-Lube LB-2000)</h4>
+            <div class="prod-meta">
+              <span class="prod-chip"><b>SKU:</b> LUB-AL-LB2000</span>
+              <span class="prod-chip"><b>Disponibilidad:</b> Envases de 1 Galón (Jarra)</span>
+            </div>
+            <p class="prod-summary">Fluido de corte sintético premium 100% biodegradable diseñado para sistemas de Micro-Lubricación (MQL) en el maquinado de aceros.</p>
+            <table class="spec-table">
+              <tr><th>Marca</th><td>Accu-Lube (ITW Pro Brands)</td></tr>
+              <tr><th>Número de Parte</th><td>LB-2000</td></tr>
+              <tr><th>Origen</th><td>Fabricado en Estados Unidos (USA)</td></tr>
+              <tr><th>Viscosidad / Inflamación</th><td>37 cSt @ 40°C / Punto de inflamación elevado a 608°F (320°C)</td></tr>
+              <tr><th>Seguridad Ambiental</th><td>Fluido sintético biodegradable de olor suave, no tóxico y bajo VOC (0.2 g/L)</td></tr>
+              <tr><th>Compatibilidad</th><td>Especializado en Aceros y operaciones generales/severas de perforación, corte y roscado</td></tr>
+            </table>
+            <ul class="prod-benefits">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span><b>Cero Inundaciones:</b> Aplica microgotas exactas directo a la herramienta, eliminando las molestas tinas de refrigerante líquido.</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span><b>Piezas Limpias:</b> Las piezas terminadas salen prácticamente secas, ahorrando costosos tiempos de lavado posterior.</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span><b>Taller Seguro:</b> Cumple con la ley US New Jersey Worker and Community Right-to-Know Act, protegiendo la salud respiratoria del operador.</span></li>
+            </ul>
+            <div class="prod-actions">
+              <a href="https://wa.me/50769212056?text=Hola,%20quiero%20cotizar%20el%20Lubricante%20Accu-Lube%20LB-2000%20(SKU%20LUB-AL-LB2000)." target="_blank" class="btn-quote"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>Solicitar Cotización</a>
+              <a href="assets/fichas/ficha-accu-lube.pdf" target="_blank" class="btn-sheet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg>Ficha Técnica</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fibra Metálica -->
+        <div class="prod rv">
+          <div class="prod-media">
+            <span class="prod-media-badge">Estructural</span>
+            <img src="assets/productos/fibra-metalica.jpg" alt="Fibra Metálica Estructural Spajic" loading="lazy">
+          </div>
+          <div class="prod-body">
+            <h4 class="prod-name">Fibra Metálica Estructural para Concreto – Spajic®</h4>
+            <div class="prod-meta">
+              <span class="prod-chip"><b>SKU:</b> SP-FM-6060</span>
+              <span class="prod-chip"><b>Disponibilidad:</b> Pallets de 1,000 kg (Sacos de 20 kg)</span>
+            </div>
+            <p class="prod-summary">Filamentos de acero trefilado en frío con extremos conformados en gancho para el refuerzo estructural tridimensional de losas y pavimentos de concreto.</p>
+            <table class="spec-table">
+              <tr><th>Marca</th><td>Spajic®</td></tr>
+              <tr><th>Dimensiones Técnicas</th><td>Diámetro: 1.00 mm (±5%)</td></tr>
+              <tr><th>Resistencia Tracción</th><td>1200 N/mm² (Alambre de alta tenacidad estirado en frío)</td></tr>
+              <tr><th>Sección Transversal</th><td>Redonda perfecta</td></tr>
+              <tr><th>Certificaciones</th><td>Sellos de calidad internacional CE y TÜV ISO 9001 Austria</td></tr>
+              <tr><th>Aplicaciones</th><td>Pisos industriales de alta carga, concreto lanzado (Shotcrete), pistas de aeropuertos y túneles</td></tr>
+            </table>
+            <ul class="prod-benefits">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span><b>Sustitución Eficiente:</b> Reemplaza parcial o totalmente el armado con varilla tradicional o malla electrosoldada.</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span><b>Refuerzo Multidireccional:</b> Se distribuye homogéneamente por toda la matriz de concreto, controlando fisuras por contracción.</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span><b>Ahorro en Obra:</b> Se añade directo en la planta de concreto o en el camión mezclador (mixer), reduciendo la mano de obra de armado.</span></li>
+            </ul>
+            <p class="prod-desc"><b>Instrucción de Mezclado:</b> Agregar al final (nunca como primer componente). Mezclar a máxima velocidad por un mínimo de 5 minutos (1 min/m³) para evitar la formación de erizos.</p>
+            <div class="prod-actions">
+              <a href="https://wa.me/50769212056?text=Hola,%20quiero%20cotizar%20Fibra%20Met%C3%A1lica%20Estructural%20Spajic%20(SKU%20SP-FM-6060)." target="_blank" class="btn-quote"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>Solicitar Cotización</a>
+              <a href="assets/fichas/ficha-fibra-metalica.pdf" target="_blank" class="btn-sheet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg>Ficha Técnica</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Componentes Electrónicos -->
+        <div class="prod rv">
+          <div class="prod-media">
+            <span class="prod-media-badge">Electrónica</span>
+            <img src="assets/productos/componentes-electronicos.jpg" alt="Componentes y Partes Electrónicas Industriales" loading="lazy">
+          </div>
+          <div class="prod-body">
+            <h4 class="prod-name">Componentes y Partes Electrónicas Industriales</h4>
+            <div class="prod-meta">
+              <span class="prod-chip"><b>SKU:</b> ELE-IND-GEN</span>
+              <span class="prod-chip"><b>Disponibilidad:</b> Suministro directo bajo requerimiento técnico</span>
+            </div>
+            <p class="prod-summary">Catálogo especializado de refacciones eléctricas, sensores de automatización, contactores, relés y módulos de control industrial.</p>
+            <p class="prod-desc"><b>Nota comercial:</b> Ideales para mantenimiento correctivo y preventivo de maquinaria pesada. Gestionamos de forma exprés marcas específicas o números de partes difíciles de conseguir localmente para evitar paros innecesarios en tus líneas de producción.</p>
+            <div class="prod-actions">
+              <a href="https://wa.me/50769212056?text=Hola,%20necesito%20gestionar%20Componentes%20y%20Partes%20Electr%C3%B3nicas%20Industriales%20(SKU%20ELE-IND-GEN)." target="_blank" class="btn-quote"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>Consultar Requerimiento</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ¿CÓMO COMPRAR? -->
+  <section class="products" id="como-comprar" style="background:var(--white);">
+    <div class="container">
+      <div class="products-header" style="text-align:center; max-width:720px; margin:0 auto;">
+        <div class="section-label rv" style="justify-content:center;">¿Cómo comprar?</div>
+        <h2 class="section-title rv rv-d1">Rápido y adaptado a<br><span class="accent">tu empresa</span></h2>
+        <p class="section-subtitle rv rv-d2" style="margin-left:auto; margin-right:auto;">Comprar en Consultores PB es sencillo. Sigue estos cuatro pasos:</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card rv">
+          <div class="step-num">01</div>
+          <div class="step-title">Explora el Catálogo</div>
+          <p class="step-text">Navega por nuestras categorías de productos e identifica los insumos, herramientas o componentes que requiere tu operación.</p>
+        </div>
+        <div class="step-card rv rv-d1">
+          <div class="step-num">02</div>
+          <div class="step-title">Solicita tu Cotización</div>
+          <p class="step-text">Haz clic en "Solicitar Cotización" en la ficha del producto o envíanos un mensaje directo con el icono de "Cotizar por WhatsApp".</p>
+        </div>
+        <div class="step-card rv rv-d2">
+          <div class="step-num">03</div>
+          <div class="step-title">Recibe tu Propuesta B2B</div>
+          <p class="step-text">Nuestro equipo técnico procesará tu requerimiento de inmediato con precios competitivos (con descuentos por volumen si aplica) y tiempos de entrega.</p>
+        </div>
+        <div class="step-card rv rv-d3">
+          <div class="step-num">04</div>
+          <div class="step-title">Coordinación y Despacho</div>
+          <p class="step-text">Una vez aprobada la cotización y confirmado el pago, coordinamos la entrega exprés a nivel nacional y la logística de exportación si estás en el exterior.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REQUERIMIENTOS ESPECIALES -->
+  <section class="special" id="requerimientos">
+    <div class="container">
+      <div class="special-inner">
+        <div class="rv">
+          <div class="section-label">Requerimientos Especiales</div>
+          <h2 class="section-title">¿Buscas una pieza<br><span class="accent">difícil de conseguir?</span></h2>
+          <p class="special-lead">Entendemos que las operaciones industriales a menudo requieren componentes con especificaciones muy particulares. Si no encuentras el inserto exacto, la parte electrónica, el tipo de broca o la variante de granalla que necesitas, <b>nosotros lo buscamos e importamos por ti.</b></p>
+          <a href="https://wa.me/50769212056?text=Hola,%20tengo%20un%20requerimiento%20especial%20y%20necesito%20ayuda%20para%20localizar%20una%20pieza." target="_blank" class="btn-primary">
+            Enviar Requerimiento
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
         </div>
+        <div class="special-points rv rv-d2">
+          <div class="special-point">
+            <div class="special-point-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <div>
+              <h4>¿Cómo funciona?</h4>
+              <p>Envíanos un correo a info@consultorespb.com o escríbenos por WhatsApp detallando la marca, el número de parte técnica o adjuntando una fotografía/ficha del componente.</p>
+            </div>
+          </div>
+          <div class="special-point">
+            <div class="special-point-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div>
+            <div>
+              <h4>Nuestro alcance</h4>
+              <p>Activamos nuestra red de distribución internacional para localizar la pieza exacta y te la entregamos directamente en tu planta o proyecto, sin que tengas que preocuparte por trámites aduaneros complejos.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- SERVICES -->
-  <section class="services" id="servicios">
+  <!-- FAQ -->
+  <section class="faq" id="faq">
     <div class="container">
-      <div class="services-header">
-        <div class="section-label rv">Nuestros Servicios</div>
-        <h2 class="section-title rv rv-d1">Soluciones integrales para<br>su <span class="accent">operaci&oacute;n industrial</span></h2>
-        <p class="section-subtitle rv rv-d2">Ofrecemos un portafolio completo de servicios orientados a optimizar sus procesos y garantizar la continuidad de sus operaciones.</p>
+      <div class="products-header" style="text-align:center; max-width:720px; margin:0 auto;">
+        <div class="section-label rv" style="justify-content:center;">Preguntas Frecuentes</div>
+        <h2 class="section-title rv rv-d1">Resolvemos tus <span class="accent">dudas</span></h2>
       </div>
-
-      <div class="services-grid">
-        <div class="service-card rv">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
-          </div>
-          <h3 class="service-title">Asesor&iacute;a T&eacute;cnica Industrial</h3>
-          <p class="service-desc">Identificamos necesidades t&eacute;cnicas y ofrecemos orientaci&oacute;n especializada para que cada cliente tome decisiones informadas.</p>
-        </div>
-
-        <div class="service-card rv rv-d1">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="6" width="22" height="12" rx="2" ry="2"/><path d="M1 10h22"/></svg>
-          </div>
-          <h3 class="service-title">Venta &amp; Suministro de Maquinaria</h3>
-          <p class="service-desc">Facilitamos la adquisici&oacute;n de maquinaria especializada a trav&eacute;s de proveedores internacionales confiables.</p>
-        </div>
-
-        <div class="service-card rv rv-d2">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
-          </div>
-          <h3 class="service-title">Herramientas Industriales</h3>
-          <p class="service-desc">Suministro de herramientas de corte, motortools, taladros magn&eacute;ticos, polipastos y m&aacute;s para aplicaciones exigentes.</p>
-        </div>
-
-        <div class="service-card rv rv-d3">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
-          </div>
-          <h3 class="service-title">Consumibles Industriales</h3>
-          <p class="service-desc">Discos de corte, cepillos de alambre, granalla y otros insumos esenciales para mantener la productividad.</p>
-        </div>
-
-        <div class="service-card rv rv-d4">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-          </div>
-          <h3 class="service-title">Repuestos &amp; Partes T&eacute;cnicas</h3>
-          <p class="service-desc">Repuestos industriales, partes electr&oacute;nicas y componentes especializados bajo pedido seg&uacute;n requerimiento.</p>
-        </div>
-
-        <div class="service-card rv rv-d5">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
-          </div>
-          <h3 class="service-title">Gesti&oacute;n de Compras &amp; Importaci&oacute;n</h3>
-          <p class="service-desc">Gestionamos la importaci&oacute;n y log&iacute;stica de equipos especializados desde proveedores internacionales.</p>
-        </div>
+      <div class="faq-list">
+        <details class="faq-item rv">
+          <summary>¿Venden al detal o solo al por mayor?</summary>
+          <p>Atendemos tanto requerimientos específicos y repuestos al detal como órdenes masivas por volumen. Contáctanos para ofrecerte la escala de precios adecuada.</p>
+        </details>
+        <details class="faq-item rv">
+          <summary>¿Hacen entregas en todo Panamá?</summary>
+          <p>Sí, contamos con un sistema de logística y distribución con cobertura de entrega a nivel nacional, asegurando que tus insumos lleguen de forma segura hasta tus instalaciones o zona de proyecto.</p>
+        </details>
+        <details class="faq-item rv">
+          <summary>¿Cómo gestionan los envíos internacionales?</summary>
+          <p>Aprovechamos las ventajas logísticas de Panamá para realizar despachos internacionales rápidos. Coordinamos la documentación de exportación y el flete correspondiente para que recibas tus componentes industriales de manera eficiente.</p>
+        </details>
+        <details class="faq-item rv">
+          <summary>¿Los productos cuentan con garantía técnica?</summary>
+          <p>Absolutamente. Todos los equipos, herramientas e insumos distribuidos por Consultores PB provienen de fabricantes certificados y marcas líderes reconocidas en el sector metalmecánico y de construcción.</p>
+        </details>
+        <details class="faq-item rv">
+          <summary>¿Cuáles son los métodos de pago aceptados?</summary>
+          <p>Aceptamos transferencias bancarias directas (ACH), depósitos y métodos de pago digitalizados rápidos. Los detalles específicos se adjuntan formalmente en cada cotización enviada.</p>
+        </details>
       </div>
     </div>
   </section>
 
-  <!-- SECTORS -->
-  <section class="sectors" id="sectores">
-    <div class="container">
-      <div class="sectors-layout">
-        <div>
-          <div class="section-label rv">Sectores</div>
-          <h2 class="section-title rv rv-d1">Industrias que<br><span class="accent">atendemos</span></h2>
-          <p class="section-subtitle rv rv-d2" style="margin-bottom: 2.5rem;">
-            Trabajamos con empresas de diversos sectores industriales, adaptando nuestras soluciones a las necesidades espec&iacute;ficas de cada operaci&oacute;n.
-          </p>
-          <div class="sectors-list">
-            <div class="sector-item rv rv-d2">
-              <span class="sector-num">01</span>
-              <span class="sector-divider"></span>
-              <span class="sector-name">Industria Manufacturera</span>
-            </div>
-            <div class="sector-item rv rv-d3">
-              <span class="sector-num">02</span>
-              <span class="sector-divider"></span>
-              <span class="sector-name">Construcci&oacute;n</span>
-            </div>
-            <div class="sector-item rv rv-d3">
-              <span class="sector-num">03</span>
-              <span class="sector-divider"></span>
-              <span class="sector-name">Miner&iacute;a</span>
-            </div>
-            <div class="sector-item rv rv-d4">
-              <span class="sector-num">04</span>
-              <span class="sector-divider"></span>
-              <span class="sector-name">Energ&iacute;a</span>
-            </div>
-            <div class="sector-item rv rv-d5">
-              <span class="sector-num">05</span>
-              <span class="sector-divider"></span>
-              <span class="sector-name">Mantenimiento Industrial</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="sectors-visual rv rv-d2">
-          <img src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=800&q=80" alt="Sector industrial" loading="lazy">
-          <div class="sectors-visual-overlay">
-            <div class="sectors-visual-stat">
-              <div class="sector-stat">
-                <div class="sector-stat-num">5+</div>
-                <div class="sector-stat-label">Sectores</div>
-              </div>
-              <div class="sector-stat">
-                <div class="sector-stat-num">100%</div>
-                <div class="sector-stat-label">Compromiso</div>
-              </div>
-              <div class="sector-stat">
-                <div class="sector-stat-num">24/7</div>
-                <div class="sector-stat-label">Soporte</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PRODUCTS -->
-  <section class="products" id="productos">
-    <div class="container">
-      <div class="products-header">
-        <div class="section-label rv">Productos</div>
-        <h2 class="section-title rv rv-d1">Equipos y herramientas<br><span class="accent">especializadas</span></h2>
-        <p class="section-subtitle rv rv-d2">Seleccionamos productos de calidad seg&uacute;n las necesidades de cada aplicaci&oacute;n industrial.</p>
-      </div>
-
-      <div class="products-grid">
-        <div class="product-card rv">
-          <div class="product-img">
-            <img src="https://images.unsplash.com/photo-1764114441097-6a475eca993d?w=600&q=80" alt="Torno industrial" loading="lazy">
-          </div>
-          <div class="product-body">
-            <div class="product-tag">Herramientas</div>
-            <div class="product-name">Motortools &amp; Taladros</div>
-            <div class="product-desc">Motortools de alta precisi&oacute;n y taladros magn&eacute;ticos para aplicaciones industriales exigentes.</div>
-          </div>
-        </div>
-
-        <div class="product-card rv rv-d1">
-          <div class="product-img">
-            <img src="https://images.unsplash.com/photo-1764114235896-034c8772de01?w=600&q=80" alt="Cortadora industrial laser" loading="lazy">
-          </div>
-          <div class="product-body">
-            <div class="product-tag">Corte</div>
-            <div class="product-name">Fresas &amp; Brocas</div>
-            <div class="product-desc">Fresas de carburo, brocas anulares, brocas HSS y especializadas como Nitto Kohki.</div>
-          </div>
-        </div>
-
-        <div class="product-card rv rv-d2">
-          <div class="product-img">
-            <img src="https://images.unsplash.com/photo-1738162837369-a2beec3a1d47?w=600&q=80" alt="Esmerilado industrial" loading="lazy">
-          </div>
-          <div class="product-body">
-            <div class="product-tag">Consumibles</div>
-            <div class="product-name">Discos &amp; Abrasivos</div>
-            <div class="product-desc">Discos de corte y desbaste, cepillos de alambre, granalla para procesos industriales.</div>
-          </div>
-        </div>
-
-        <div class="product-card rv rv-d3">
-          <div class="product-img">
-            <img src="https://images.unsplash.com/photo-1633504095688-4a1e36d6b3a5?w=600&q=80" alt="Equipos de taller industrial" loading="lazy">
-          </div>
-          <div class="product-body">
-            <div class="product-tag">Equipos</div>
-            <div class="product-name">Polipastos &amp; Elevaci&oacute;n</div>
-            <div class="product-desc">Equipos de elevaci&oacute;n, polipastos y componentes t&eacute;cnicos especializados bajo pedido.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- CTA BAND -->
   <section class="cta-band">
     <div class="cta-band-overlay"></div>
     <div class="cta-band-inner">
       <div class="cta-band-text rv">
-        <h2 class="cta-band-title">&iquest;Necesita asesor&iacute;a para su <span class="accent">pr&oacute;ximo proyecto</span>?</h2>
-        <p class="cta-band-desc">Nuestro equipo est&aacute; listo para ayudarle a encontrar la soluci&oacute;n t&eacute;cnica ideal para su operaci&oacute;n.</p>
+        <h2 class="cta-band-title">&iquest;Listo para optimizar tus <span class="accent">costos de operaci&oacute;n</span>?</h2>
+        <p class="cta-band-desc">Nuestro equipo t&eacute;cnico est&aacute; listo para enviarte una cotizaci&oacute;n de volumen con precios competitivos y entrega &aacute;gil.</p>
       </div>
       <div class="cta-band-actions rv rv-d2">
         <a href="https://wa.me/50769212056" target="_blank" class="btn-primary">
@@ -1269,10 +2036,10 @@
     <div class="container">
       <div class="contact-grid">
         <div>
-          <div class="section-label rv">Contacto</div>
-          <h2 class="section-title rv rv-d1">Hablemos de su<br><span class="accent">pr&oacute;ximo proyecto</span></h2>
+          <div class="section-label rv">Solicitar Cotizaci&oacute;n</div>
+          <h2 class="section-title rv rv-d1">Hablemos de tu<br><span class="accent">pr&oacute;ximo requerimiento</span></h2>
           <p class="section-subtitle rv rv-d2">
-            Cont&aacute;ctenos para recibir asesor&iacute;a t&eacute;cnica personalizada. Nuestro equipo responder&aacute; a la brevedad.
+            Cont&aacute;ctanos para recibir una propuesta B2B con precios competitivos y tiempos de entrega. Nuestro equipo t&eacute;cnico responder&aacute; a la brevedad.
           </p>
 
           <div class="contact-info-cards">
@@ -1281,7 +2048,7 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
               </div>
               <div>
-                <div class="contact-card-label">Tel&eacute;fono</div>
+                <div class="contact-card-label">Central / Ventas</div>
                 <div class="contact-card-value">+507 398-6559</div>
               </div>
             </div>
@@ -1298,19 +2065,29 @@
 
             <div class="contact-card rv rv-d5">
               <div class="contact-card-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M16 8v5a3 3 0 006 0v-1a10 10 0 10-3.92 7.94"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
               </div>
               <div>
-                <div class="contact-card-label">Contacto</div>
-                <div class="contact-card-value">Pablo Bravo</div>
+                <div class="contact-card-label">Correo Corporativo</div>
+                <div class="contact-card-value">info@consultorespb.com</div>
+              </div>
+            </div>
+
+            <div class="contact-card rv rv-d5">
+              <div class="contact-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <div class="contact-card-label">Ubicaci&oacute;n</div>
+                <div class="contact-card-value">Ciudad de Panam&aacute;, Panam&aacute;</div>
               </div>
             </div>
           </div>
         </div>
 
         <div class="contact-form-wrap rv rv-d2">
-          <h3 class="contact-form-title">Solicitar Asesor&iacute;a</h3>
-          <p class="contact-form-sub">Complete el formulario y nos pondremos en contacto.</p>
+          <h3 class="contact-form-title">Solicitar Cotizaci&oacute;n</h3>
+          <p class="contact-form-sub">Completa el formulario y te enviaremos una propuesta a la brevedad.</p>
           <form id="contactForm" onsubmit="handleSubmit(event)">
             <div class="form-row">
               <div class="form-group">
@@ -1333,15 +2110,14 @@
               </div>
             </div>
             <div class="form-group">
-              <label for="servicio">Servicio de Inter&eacute;s</label>
+              <label for="servicio">Categor&iacute;a de Inter&eacute;s</label>
               <select id="servicio">
-                <option value="">Seleccione un servicio</option>
-                <option value="asesoria">Asesor&iacute;a T&eacute;cnica</option>
-                <option value="maquinaria">Venta de Maquinaria</option>
-                <option value="herramientas">Herramientas Industriales</option>
-                <option value="consumibles">Consumibles Industriales</option>
-                <option value="repuestos">Repuestos &amp; Partes</option>
-                <option value="importacion">Gesti&oacute;n de Importaci&oacute;n</option>
+                <option value="">Seleccione una categor&iacute;a</option>
+                <option value="Consumibles e Insumos Industriales">Consumibles e Insumos Industriales</option>
+                <option value="Herramientas de Corte y Mecanizado">Herramientas de Corte y Mecanizado</option>
+                <option value="Equipos y Herramientas El&eacute;ctricas">Equipos y Herramientas El&eacute;ctricas</option>
+                <option value="Soluciones Estructurales y Fluidos">Soluciones Estructurales y Fluidos</option>
+                <option value="Requerimiento Especial">Requerimiento Especial / Importaci&oacute;n</option>
               </select>
             </div>
             <div class="form-group">
@@ -1364,43 +2140,68 @@
           <span class="nav-brand-text" style="color: var(--white);">CONSULTORES <span>PB</span></span>
         </a>
         <p class="footer-brand-desc">
-          Asesor&iacute;a t&eacute;cnica y soluciones industriales confiables en Panam&aacute;. Su aliado estrat&eacute;gico para maquinaria, herramientas y consumibles especializados.
+          Tu aliado estrat&eacute;gico en suministro e importaci&oacute;n industrial. El canal directo entre las f&aacute;bricas l&iacute;deres a nivel global y las operaciones que mueven al mundo.
         </p>
       </div>
       <div>
-        <h4 class="footer-col-title">Servicios</h4>
+        <h4 class="footer-col-title">Cat&aacute;logo de Productos</h4>
         <ul class="footer-links">
-          <li><a href="#servicios">Asesor&iacute;a T&eacute;cnica</a></li>
-          <li><a href="#servicios">Venta de Maquinaria</a></li>
-          <li><a href="#servicios">Herramientas Industriales</a></li>
-          <li><a href="#servicios">Consumibles</a></li>
-          <li><a href="#servicios">Importaci&oacute;n de Equipos</a></li>
+          <li><a href="#cat-consumibles">Consumibles e Insumos Industriales</a></li>
+          <li><a href="#cat-corte">Herramientas de Corte y Mecanizado</a></li>
+          <li><a href="#cat-electricas">Equipos y Herramientas El&eacute;ctricas</a></li>
+          <li><a href="#cat-estructurales">Soluciones Estructurales y Fluidos</a></li>
         </ul>
       </div>
       <div>
-        <h4 class="footer-col-title">Sectores</h4>
+        <h4 class="footer-col-title">Empresa y Soporte</h4>
         <ul class="footer-links">
-          <li><a href="#sectores">Manufactura</a></li>
-          <li><a href="#sectores">Construcci&oacute;n</a></li>
-          <li><a href="#sectores">Miner&iacute;a</a></li>
-          <li><a href="#sectores">Energ&iacute;a</a></li>
-          <li><a href="#sectores">Mantenimiento</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#como-comprar">&iquest;C&oacute;mo comprar?</a></li>
+          <li><a href="#requerimientos">Requerimientos Especiales</a></li>
+          <li><a href="#contacto">Solicitar Cotizaci&oacute;n</a></li>
+          <li><a href="#faq">Preguntas Frecuentes</a></li>
         </ul>
       </div>
       <div>
-        <h4 class="footer-col-title">Contacto</h4>
-        <ul class="footer-links">
-          <li><a href="tel:+5073986559">+507 398-6559</a></li>
-          <li><a href="https://wa.me/50769212056" target="_blank">+507 6921-2056</a></li>
-          <li><a href="mailto:info@consultorespb.com">info@consultorespb.com</a></li>
-          <li><a href="#">Panam&aacute;</a></li>
+        <h4 class="footer-col-title">Contacto y Log&iacute;stica</h4>
+        <ul class="footer-contact-list">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            <span><b>Central / Ventas</b><a href="tel:+5073986559">+507 398-6559</a></span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884"/></svg>
+            <span><b>WhatsApp Ventas</b><a href="https://wa.me/50769212056" target="_blank">+507 6921-2056</a></span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span><b>Correo Corporativo</b><a href="mailto:info@consultorespb.com">info@consultorespb.com</a></span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span><b>Correo Alterno</b><a href="mailto:consultorespb07@gmail.com">consultorespb07@gmail.com</a></span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span><b>Ubicaci&oacute;n</b>Ciudad de Panam&aacute;, Panam&aacute;</span>
+          </li>
         </ul>
+      </div>
+    </div>
+    <div class="footer-shipping">
+      <div class="footer-ship-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        <span><b>Env&iacute;os Nacionales:</b> Despachos a todo el territorio de la Rep&uacute;blica de Panam&aacute;.</span>
+      </div>
+      <div class="footer-ship-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+        <span><b>Env&iacute;os Internacionales:</b> Log&iacute;stica y exportaci&oacute;n directa desde Panam&aacute;.</span>
       </div>
     </div>
     <div class="footer-bottom">
       <div class="footer-bottom-inner">
-        <span class="footer-copy">&copy; 2025 Consultores PB. Todos los derechos reservados.</span>
-        <span class="footer-copy">Dise&ntilde;ado con precisi&oacute;n industrial.</span>
+        <span class="footer-copy">&copy; 2026 Consultores PB. Todos los derechos reservados.</span>
+        <span class="footer-copy">Distribuimos: DeWalt &middot; Nitto Kohki &middot; Drill America &middot; Hougen &middot; Accu-Lube &middot; W&uuml;rth</span>
       </div>
     </div>
   </footer>
