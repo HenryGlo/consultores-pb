@@ -8,36 +8,44 @@ producto tiene una hoja informativa que redirige a **Cotizar**.
 
 | Archivo            | Qué es                                                        |
 |--------------------|--------------------------------------------------------------|
-| `index.html`       | Página principal: hero, categorías, productos destacados      |
-| `categoria.html`   | Listado de productos con filtros (grilla de tarjetas)         |
-| `producto.html`    | **Ficha / hoja informativa** de un producto → botón Cotizar   |
-| `cotizar.html`     | Formulario de cotización (envía por WhatsApp o correo)         |
+| `index.html`       | Página principal: hero, categorías, destacados, Nosotros, ¿Cómo comprar?, FAQ |
+| `categoria.html`   | Listado de productos por categoría (se dibuja solo desde los datos) |
+| `producto.html`    | **Ficha de producto** (se dibuja sola desde los datos) → botón Cotizar |
+| `cotizar.html`     | Formulario de cotización (envía por WhatsApp)                  |
+| `assets/datos.js`  | **AQUÍ viven los productos y categorías.** Editar esto para todo el contenido de productos. |
 | `assets/estilos.css` | Diseño (colores, tipografía). Normalmente NO se toca.       |
-| `assets/app.js`    | Pequeñas funciones (galería, cargar producto en cotizar)      |
+| `assets/app.js`    | Pequeñas funciones (galería, pestañas, prefill de cotizar)    |
 
 ## Para ver el sitio
-Abre `index.html` con doble clic en tu navegador. No necesita servidor.
+Ábrelo con un servidor local (por ejemplo `python3 -m http.server`) y entra a
+`http://localhost:8000/catalogo/`. Las páginas de catálogo/ficha leen los datos con
+JavaScript, por lo que conviene servirlas (no abrirlas con doble clic).
 
-## Reglas de edición (busca los comentarios `👉 EDITAR`)
-- **Textos:** edita directamente entre las etiquetas, sin tocar los `<...>`.
-- **Imágenes:** reemplaza el enlace dentro de `src="..."`. Puedes poner fotos
-  propias en `assets/` y usar `src="assets/mi-foto.jpg"`.
-- **Agregar un producto a una grilla:** copia un bloque completo
-  `<article class="prod-card"> … </article>` y pégalo debajo; cambia nombre, SKU,
-  imagen y el enlace del botón Cotizar.
+## ⭐ Cómo se cargan los productos ahora
+Los productos ya NO se escriben a mano en cada HTML. Todo el catálogo vive en un
+solo archivo: **`assets/datos.js`**. Las páginas se dibujan solas:
+- `index.html` → muestra las 4 categorías y los productos marcados como `destacado`.
+- `categoria.html?cat=ID` → lista los productos de esa categoría (IDs: `consumibles`,
+  `corte`, `electricas`, `estructurales`).
+- `producto.html?sku=SKU` → muestra la ficha completa de ese producto.
 
-## Crear la ficha de un producto nuevo
-1. Duplica `producto.html` y renómbralo, ej. `producto-fresa-sc.html`.
-2. Cambia las zonas `👉 EDITAR`: título, marca, SKU, imágenes, tabla de specs,
-   descripción y aplicaciones.
-3. En el botón **Solicitar cotización**, actualiza `?producto=...&sku=...` para que
-   el formulario cargue automáticamente ese producto.
-4. En `categoria.html` e `index.html`, apunta el botón “Ver ficha” a tu nuevo archivo.
+## Agregar o editar un producto
+1. Abre `assets/datos.js` y busca el arreglo `PB_PRODS`.
+2. Copia un bloque `{ ... }` completo (entre llaves) y pégalo al final de la lista.
+3. Edita sus campos:
+   - `sku`, `name`, `brand`, `cat` (una de las 4 categorías), `img`, `disp`.
+   - `summary` (resumen), `specs` (tabla, pares `['Campo','Valor']`),
+     `benefits` (pares `['Título','Texto']`), `description`.
+   - `ficha`: nombre del PDF dentro de `assets/fichas/` (o `null` si no tiene).
+   - `destacado: true` si quieres que aparezca en la portada.
+   - `variations` (opcional): tabla de variaciones/medidas.
+4. Pon la foto en `assets/productos/` y el PDF en `assets/fichas/`, y referencia sus
+   nombres en `img` y `ficha`.
 
 ## Datos a actualizar en todo el sitio (si cambian)
-- Teléfono: `+507 398-6559`
-- WhatsApp: `50769212056` (aparece en enlaces `wa.me/...` y en `app.js`)
-- Correo: `info@consultorespb.com`
+- Teléfono / Central de ventas: `+507 398-6559`
+- WhatsApp Ventas: `50769212056` (enlaces `wa.me/...`, en `app.js` y en `datos.js` como `PB_WA`)
+- Correo corporativo: `info@consultorespb.com` · Correo alterno: `consultorespb07@gmail.com`
 
 ## Cómo se envía la cotización hoy
 El formulario abre **WhatsApp** con todos los datos ya escritos. Si más adelante

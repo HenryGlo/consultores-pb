@@ -3,20 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Consultores PB — Herramientas y Equipos Industriales | Panamá</title>
-  <meta name="description" content="Distribuidor de herramientas y equipos industriales en Panamá: amoladoras, fresas de carburo, brocas anulares, discos de corte, taladros magnéticos y polipastos. Solicita tu cotización.">
+  <title>Consultores PB — Suministro e Importación Industrial B2B | Panamá</title>
+  <meta name="description" content="Tu aliado estratégico en suministro e importación industrial en Panamá. Consumibles, herramientas de corte, equipos eléctricos y soluciones estructurales. Marcas: DeWalt, Hougen, Drill America, Nitto Kohki, Accu-Lube, Würth.">
   <link rel="icon" href="assets/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/estilos.css">
+  <style>
+    /* Secciones informativas propias del index (contenido del PDF) */
+    .pb-pillars { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .pb-pillar { display: flex; gap: 14px; padding: 20px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); transition: .2s; }
+    .pb-pillar:hover { border-color: var(--amber); box-shadow: var(--shadow); }
+    .pb-pillar .ic { width: 44px; height: 44px; border-radius: 9px; background: var(--navy); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .pb-pillar .ic svg { width: 21px; height: 21px; color: var(--amber); }
+    .pb-pillar h4 { font-size: 15px; color: var(--ink); margin-bottom: 4px; }
+    .pb-pillar p { font-size: 13.5px; color: var(--muted); line-height: 1.55; }
+    .pb-mv { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
+    .pb-mv-card { padding: 26px; border-radius: var(--radius); background: var(--navy); color: #fff; }
+    .pb-mv-card.vision { background: var(--amber); color: var(--navy); }
+    .pb-mv-card .lbl { font-size: 12px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; color: var(--amber); margin-bottom: 10px; }
+    .pb-mv-card.vision .lbl { color: var(--navy); }
+    .pb-mv-card p { font-size: 15px; line-height: 1.65; color: #c4cdd6; }
+    .pb-mv-card.vision p { color: var(--navy); font-weight: 500; }
+    .pb-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+    .pb-step { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; transition: .2s; }
+    .pb-step:hover { border-color: var(--amber); box-shadow: var(--shadow); }
+    .pb-step .num { font-size: 34px; font-weight: 800; color: var(--amber); line-height: 1; margin-bottom: 10px; }
+    .pb-step h4 { font-size: 16px; color: var(--ink); margin-bottom: 6px; }
+    .pb-step p { font-size: 13.5px; color: var(--muted); line-height: 1.55; }
+    .pb-special { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+    .pb-special-points { display: grid; gap: 16px; }
+    .pb-special-point { display: flex; gap: 14px; }
+    .pb-special-point .ic { width: 42px; height: 42px; border-radius: 9px; background: var(--amber-soft); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .pb-special-point .ic svg { width: 21px; height: 21px; color: var(--amber-dark); }
+    .pb-special-point h4 { font-size: 15px; color: var(--ink); margin-bottom: 3px; }
+    .pb-special-point p { font-size: 13.5px; color: var(--muted); line-height: 1.55; }
+    .pb-faq { max-width: 820px; margin: 0 auto; display: grid; gap: 12px; }
+    .pb-faq details { border: 1px solid var(--line); border-radius: var(--radius); background: #fff; }
+    .pb-faq details[open] { border-color: var(--amber); }
+    .pb-faq summary { cursor: pointer; list-style: none; padding: 18px 22px; font-weight: 700; font-size: 15.5px; color: var(--ink); display: flex; justify-content: space-between; gap: 14px; align-items: center; }
+    .pb-faq summary::-webkit-details-marker { display: none; }
+    .pb-faq summary::after { content: '+'; color: var(--amber); font-size: 22px; line-height: 1; }
+    .pb-faq details[open] summary::after { content: '\2212'; }
+    .pb-faq p { padding: 0 22px 20px; color: var(--body); font-size: 14px; line-height: 1.65; }
+    @media (max-width:920px){ .pb-pillars,.pb-mv,.pb-special{grid-template-columns:1fr} .pb-steps{grid-template-columns:repeat(2,1fr)} }
+    @media (max-width:560px){ .pb-steps{grid-template-columns:1fr} }
+  </style>
 </head>
-<body>
+<body data-page="index">
 
-<!-- ════════════════════════════════════════════════════════════
-     CABECERA (se repite igual en todas las páginas)
-     👉 EDITAR: teléfono, correo y horario de Consultores PB
-     ════════════════════════════════════════════════════════════ -->
+<!-- TOPBAR -->
 <div class="topbar">
   <div class="container">
     <div class="topbar-left">
@@ -25,20 +62,21 @@
       <span class="hide-sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Lun–Vie 8:00–17:00</span>
     </div>
     <div class="topbar-right">
-      <a href="cotizar.html">Mi cotización</a>
-      <a href="#">Ubicación</a>
+      <a href="cotizar.html">Solicitar cotización</a>
+      <a href="https://wa.me/50769212056" target="_blank">WhatsApp +507 6921-2056</a>
     </div>
   </div>
 </div>
 
+<!-- HEADER -->
 <header class="header">
   <div class="container">
     <a href="index.html" class="brand">
       <img src="assets/logo.png" alt="Consultores PB">
-      <div class="brand-txt"><strong>Consultores PB</strong><span>Soluciones Industriales</span></div>
+      <div class="brand-txt"><strong>Consultores PB</strong><span>Suministro Industrial B2B</span></div>
     </a>
     <form class="search" onsubmit="return false">
-      <input type="search" placeholder="Buscar por producto, marca o código (ej. fresa de carburo, HSS, DeWalt)…">
+      <input type="search" placeholder="Buscar por producto, marca o SKU (ej. granalla, cortador anular, Hougen)…">
       <button aria-label="Buscar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
     </form>
     <div class="header-actions">
@@ -47,30 +85,27 @@
   </div>
 </header>
 
+<!-- NAV -->
 <nav class="nav">
   <div class="container">
-    <!-- 👉 EDITAR: estas son las CATEGORÍAS del menú. Cada una abre categoria.html -->
     <a href="categoria.html" class="active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>Catálogo</a>
-    <a href="categoria.html">Amoladoras</a>
-    <a href="categoria.html">Fresas de carburo</a>
-    <a href="categoria.html">Brocas anulares</a>
-    <a href="categoria.html">Discos de corte</a>
-    <a href="categoria.html">Taladros magnéticos</a>
-    <a href="categoria.html">Polipastos</a>
+    <a href="categoria.html?cat=consumibles">Consumibles</a>
+    <a href="categoria.html?cat=corte">Herramientas de Corte</a>
+    <a href="categoria.html?cat=electricas">Equipos Eléctricos</a>
+    <a href="categoria.html?cat=estructurales">Soluciones Estructurales</a>
+    <a href="#nosotros">Nosotros</a>
     <span class="nav-cta"><a href="cotizar.html">Cotiza tu pedido →</a></span>
   </div>
 </nav>
 
-<!-- ════════════════════════════════════════════════════════════
-     HERO  👉 EDITAR: título, texto e imagen de fondo
-     ════════════════════════════════════════════════════════════ -->
+<!-- HERO -->
 <section class="hero">
   <img class="hero-bg" src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1600&q=80" alt="">
   <div class="container">
     <div class="hero-inner">
-      <span class="eyebrow"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6"/></svg>Distribuidor industrial · Panamá</span>
-      <h1>Herramientas y equipos industriales para tu operación</h1>
-      <p>Amoladoras, fresas de carburo, brocas anulares, discos de corte, taladros magnéticos y polipastos. Calidad y eficiencia que tu trabajo requiere — cotiza directo, sin intermediarios.</p>
+      <span class="eyebrow"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6"/></svg>Suministro e importación industrial B2B · Panamá</span>
+      <h1>Tu aliado estratégico en suministro industrial</h1>
+      <p>El canal directo entre las fábricas líderes a nivel global y las operaciones que mueven al mundo. Consumibles, herramientas de corte, equipos eléctricos y soluciones estructurales desde el Hub de las Américas.</p>
       <div class="hero-btns">
         <a href="categoria.html" class="btn btn-amber btn-lg">Ver catálogo</a>
         <a href="cotizar.html" class="btn btn-ghost btn-lg" style="background:transparent;color:#fff;border-color:rgba(255,255,255,.3)">Solicitar cotización</a>
@@ -82,110 +117,117 @@
 <!-- TIRA DE CONFIANZA -->
 <div class="trust">
   <div class="container">
-    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg><span><strong>Productos garantizados</strong> de marcas reconocidas</span></div>
-    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg><span><strong>Asesoría técnica</strong> para elegir bien</span></div>
-    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg><span><strong>Entrega</strong> en todo Panamá</span></div>
+    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg><span><strong>Abastecimiento integral B2B</strong> de insumos críticos</span></div>
+    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg><span><strong>Logística sin fronteras</strong> · nacional e internacional</span></div>
+    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span><strong>Calidad certificada</strong> de marcas globales</span></div>
     <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg><span><strong>Cotización rápida</strong> por WhatsApp</span></div>
   </div>
 </div>
 
-<!-- ════════════════════════════════════════════════════════════
-     CATEGORÍAS  👉 EDITAR: imagen, nombre y nº de productos
-     ════════════════════════════════════════════════════════════ -->
+<!-- CATEGORÍAS -->
 <section class="section">
   <div class="container">
     <div class="section-head center">
-      <span class="kicker">Explora por categoría</span>
-      <h2>Nuestra gama de productos</h2>
-      <p>Todo lo que necesitas para metalmecánica, construcción, mantenimiento e industria.</p>
+      <span class="kicker">Catálogo maestro</span>
+      <h2>Nuestras cuatro líneas de suministro</h2>
+      <p>Todo lo que tu operación necesita para metalmecánica, construcción, mantenimiento e industria.</p>
     </div>
-    <div class="cat-grid">
-      <a href="categoria.html" class="cat-card"><div class="cat-card-img"><img src="https://images.unsplash.com/photo-1504148455328-c376907d081c?w=600&q=80" alt="Amoladoras"></div><div class="cat-card-body"><h3>Amoladoras eléctricas</h3><span>Alta potencia · CA/CC</span><span class="go">Ver productos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span></div></a>
-      <a href="categoria.html" class="cat-card"><div class="cat-card-img"><img src="https://images.unsplash.com/photo-1530124566582-a618bc2615dc?w=600&q=80" alt="Fresas de carburo"></div><div class="cat-card-body"><h3>Fresas de carburo</h3><span>Tipos SB · SF · SC</span><span class="go">Ver productos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span></div></a>
-      <a href="categoria.html" class="cat-card"><div class="cat-card-img"><img src="https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=600&q=80" alt="Brocas anulares"></div><div class="cat-card-body"><h3>Brocas / cortadores anulares</h3><span>HSS · Carburo de tungsteno</span><span class="go">Ver productos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span></div></a>
-      <a href="categoria.html" class="cat-card"><div class="cat-card-img"><img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80" alt="Discos de corte"></div><div class="cat-card-body"><h3>Discos de corte y desbaste</h3><span>Acero · Inoxidable · Metales</span><span class="go">Ver productos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span></div></a>
-      <a href="categoria.html" class="cat-card"><div class="cat-card-img"><img src="https://images.unsplash.com/photo-1426927308491-6380b6a9936f?w=600&q=80" alt="Cepillos de alambre"></div><div class="cat-card-body"><h3>Cepillos de alambre</h3><span>Anudados · Para óxido</span><span class="go">Ver productos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span></div></a>
-      <a href="categoria.html" class="cat-card"><div class="cat-card-img"><img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&q=80" alt="Taladros magnéticos"></div><div class="cat-card-body"><h3>Taladros magnéticos</h3><span>Hougen · Dos velocidades</span><span class="go">Ver productos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span></div></a>
-      <a href="categoria.html" class="cat-card"><div class="cat-card-img"><img src="https://images.unsplash.com/photo-1565891741441-64926e441838?w=600&q=80" alt="Polipastos"></div><div class="cat-card-body"><h3>Polipastos eléctricos</h3><span>Heavy duty · Cadena G80</span><span class="go">Ver productos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span></div></a>
-      <a href="categoria.html" class="cat-card" style="background:var(--amber-soft);border-color:var(--amber)"><div class="cat-card-img" style="display:flex;align-items:center;justify-content:center;background:var(--amber-soft)"><svg viewBox="0 0 24 24" fill="none" stroke="var(--amber-dark)" stroke-width="1.5" width="56" height="56"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div><div class="cat-card-body"><h3>Ver todo el catálogo</h3><span>Todos los productos disponibles</span><span class="go">Explorar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span></div></a>
-    </div>
+    <div class="cat-grid" id="pb-cats"></div>
   </div>
 </section>
 
-<!-- ════════════════════════════════════════════════════════════
-     PRODUCTOS DESTACADOS
-     👉 EDITAR: cada tarjeta es un producto. Copia/pega un bloque
-        <article class="prod-card">…</article> para agregar más.
-        El botón "Ver ficha" abre producto.html.
-     ════════════════════════════════════════════════════════════ -->
+<!-- PRODUCTOS DESTACADOS -->
 <section class="section alt">
   <div class="container">
     <div class="section-head row">
       <div><span class="kicker">Lo más solicitado</span><h2>Productos destacados</h2></div>
       <a href="categoria.html" class="link-more">Ver todos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     </div>
-    <div class="prod-grid">
+    <div class="prod-grid" id="pb-destacados"></div>
+  </div>
+</section>
 
-      <!-- ░░ PRODUCTO ░░ -->
-      <article class="prod-card">
-        <div class="prod-card-img"><span class="prod-tag amber">Destacado</span><img src="https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80" alt="Amoladora eléctrica"></div>
-        <div class="prod-card-body">
-          <span class="prod-brand">DeWalt</span>
-          <h3><a href="producto.html">Amoladora eléctrica de alta potencia</a></h3>
-          <p class="prod-sku">SKU: AMO-DW-001</p>
-          <ul class="prod-specs"><li>Motor de alto amperaje · alto RPM</li><li>Funciona con CA/CC y generadores</li><li>Interruptor de paleta con bloqueo</li></ul>
-          <div class="prod-card-foot">
-            <a href="producto.html" class="btn btn-ghost">Ver ficha</a>
-            <a href="cotizar.html?producto=Amoladora%20eléctrica%20DeWalt&sku=AMO-DW-001" class="btn btn-amber">Cotizar</a>
-          </div>
-        </div>
-      </article>
+<!-- NOSOTROS -->
+<section class="section" id="nosotros">
+  <div class="container">
+    <div class="section-head" style="max-width:760px">
+      <span class="kicker">Nosotros: Consultores PB</span>
+      <h2>Tu aliado estratégico en suministro e importación industrial</h2>
+      <p>En Consultores PB nos dedicamos a mantener la continuidad operativa de tu empresa, taller o proyecto. Nacimos en Panamá con una visión clara: simplificar la cadena de suministro industrial eliminando intermediarios innecesarios. Somos el canal directo entre las fábricas líderes a nivel global y las operaciones que mueven al mundo.</p>
+    </div>
+    <div class="pb-pillars">
+      <div class="pb-pillar"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div><div><h4>Abastecimiento Integral B2B</h4><p>Desde granalla de acero premium y lubricantes biodegradables hasta partes electrónicas complejas. Si tu operación lo necesita, lo suministramos o lo gestionamos a medida.</p></div></div>
+      <div class="pb-pillar"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg></div><div><h4>Logística sin Fronteras</h4><p>Rompemos las barreras geográficas con entregas rápidas a nivel nacional y servicios de exportación eficientes para requerimientos internacionales.</p></div></div>
+      <div class="pb-pillar"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div><div><h4>Respaldo y Calidad Certificada</h4><p>Trabajamos con marcas globales reconocidas y productos que cumplen estrictas normativas internacionales, asegurando el rendimiento de tu inversión.</p></div></div>
+      <div class="pb-pillar"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.663 17h4.673M12 3v1M12 17.5V21M6.34 6.34l.7.7M17.66 6.34l-.7.7M4 12H3M21 12h-1M8 14a5 5 0 118 0c0 1.5-1 2.5-1.5 3.5H9.5C9 16.5 8 15.5 8 14z"/></svg></div><div><h4>Asesoría Técnica Especializada</h4><p>Entendemos el lenguaje técnico de la industria: te ayudamos a elegir el inserto exacto, el tipo de broca o la dosificación de fibra adecuada para optimizar tus procesos.</p></div></div>
+    </div>
+    <div class="pb-mv">
+      <div class="pb-mv-card"><div class="lbl">Nuestra Misión</div><p>Proveer de manera ágil y confiable insumos, herramientas y componentes industriales de la más alta calidad, impulsando la eficiencia, la seguridad y la rentabilidad de las operaciones de nuestros clientes en Panamá y el mundo.</p></div>
+      <div class="pb-mv-card vision"><div class="lbl">Nuestra Visión</div><p>Consolidarnos como la plataforma de suministro industrial B2B líder en la región, reconocida por nuestra capacidad de respuesta, catálogo especializado de vanguardia y excelencia logística internacional.</p></div>
+    </div>
+  </div>
+</section>
 
-      <!-- ░░ PRODUCTO ░░ -->
-      <article class="prod-card">
-        <div class="prod-card-img"><img src="https://images.unsplash.com/photo-1530124566582-a618bc2615dc?w=500&q=80" alt="Fresa de carburo"></div>
-        <div class="prod-card-body">
-          <span class="prod-brand">Consultores PB</span>
-          <h3><a href="producto.html">Fresa de carburo tipo SC</a></h3>
-          <p class="prod-sku">SKU: FRESA-SC-3/8</p>
-          <ul class="prod-specs"><li>Versatilidad en formas de diente</li><li>Para diversos materiales</li><li>Empaque individual protegido</li></ul>
-          <div class="prod-card-foot">
-            <a href="producto.html" class="btn btn-ghost">Ver ficha</a>
-            <a href="cotizar.html?producto=Fresa%20de%20carburo%20tipo%20SC&sku=FRESA-SC-3/8" class="btn btn-amber">Cotizar</a>
-          </div>
-        </div>
-      </article>
+<!-- ¿CÓMO COMPRAR? -->
+<section class="section alt" id="como-comprar">
+  <div class="container">
+    <div class="section-head center">
+      <span class="kicker">¿Cómo comprar?</span>
+      <h2>Rápido y adaptado a tu empresa</h2>
+      <p>Comprar en Consultores PB es sencillo. Sigue estos cuatro pasos.</p>
+    </div>
+    <div class="pb-steps">
+      <div class="pb-step"><div class="num">01</div><h4>Explora el catálogo</h4><p>Navega por nuestras categorías e identifica los insumos, herramientas o componentes que requiere tu operación.</p></div>
+      <div class="pb-step"><div class="num">02</div><h4>Solicita tu cotización</h4><p>Haz clic en "Solicitar cotización" en la ficha del producto o escríbenos directo con el botón de "Cotizar por WhatsApp".</p></div>
+      <div class="pb-step"><div class="num">03</div><h4>Recibe tu propuesta B2B</h4><p>Nuestro equipo técnico procesa tu requerimiento con precios competitivos (descuentos por volumen si aplica) y tiempos de entrega.</p></div>
+      <div class="pb-step"><div class="num">04</div><h4>Coordinación y despacho</h4><p>Aprobada la cotización y confirmado el pago, coordinamos la entrega exprés nacional y la logística de exportación si estás en el exterior.</p></div>
+    </div>
+  </div>
+</section>
 
-      <!-- ░░ PRODUCTO ░░ -->
-      <article class="prod-card">
-        <div class="prod-card-img"><img src="https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=500&q=80" alt="Broca anular"></div>
-        <div class="prod-card-body">
-          <span class="prod-brand">Consultores PB</span>
-          <h3><a href="producto.html">Broca / cortador anular HSS</a></h3>
-          <p class="prod-sku">SKU: BRO-HSS-22</p>
-          <ul class="prod-specs"><li>Acero de alta velocidad (HSS)</li><li>Uso profesional intensivo</li><li>Perforaciones de gran diámetro</li></ul>
-          <div class="prod-card-foot">
-            <a href="producto.html" class="btn btn-ghost">Ver ficha</a>
-            <a href="cotizar.html?producto=Broca%20anular%20HSS&sku=BRO-HSS-22" class="btn btn-amber">Cotizar</a>
-          </div>
-        </div>
-      </article>
+<!-- REQUERIMIENTOS ESPECIALES -->
+<section class="cta-band" id="requerimientos" style="padding:0">
+  <div class="container" style="display:block;padding:56px 24px">
+    <div class="pb-special">
+      <div>
+        <span class="kicker" style="color:var(--amber)">Requerimientos Especiales</span>
+        <h2 style="font-size:30px;font-weight:800;margin:8px 0 14px">¿Buscas una pieza difícil de conseguir?</h2>
+        <p style="color:#c4cdd6;font-size:15.5px;line-height:1.7;margin-bottom:24px">Si no encuentras el inserto exacto, la parte electrónica, el tipo de broca o la variante de granalla que necesitas, <strong style="color:var(--amber)">nosotros lo buscamos e importamos por ti.</strong></p>
+        <a href="https://wa.me/50769212056?text=Hola,%20tengo%20un%20requerimiento%20especial%20y%20necesito%20ayuda%20para%20localizar%20una%20pieza." target="_blank" class="btn btn-amber btn-lg">Enviar requerimiento</a>
+      </div>
+      <div class="pb-special-points">
+        <div class="pb-special-point"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div><h4 style="color:#fff">¿Cómo funciona?</h4><p style="color:#b6c0c9">Envíanos un correo a info@consultorespb.com o escríbenos por WhatsApp con la marca, el número de parte o una fotografía/ficha del componente.</p></div></div>
+        <div class="pb-special-point"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div><div><h4 style="color:#fff">Nuestro alcance</h4><p style="color:#b6c0c9">Activamos nuestra red de distribución internacional para localizar la pieza exacta y entregarla en tu planta, sin trámites aduaneros complejos.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-      <!-- ░░ PRODUCTO ░░ -->
-      <article class="prod-card">
-        <div class="prod-card-img"><span class="prod-tag">Más vendido</span><img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=500&q=80" alt="Disco de corte"></div>
-        <div class="prod-card-body">
-          <span class="prod-brand">Consultores PB</span>
-          <h3><a href="producto.html">Disco de corte 4½" para metal</a></h3>
-          <p class="prod-sku">SKU: DISCO-115-1.0</p>
-          <ul class="prod-specs"><li>Cortes limpios y precisos</li><li>Acero, inoxidable y metales</li><li>Desbaste rápido y agresivo</li></ul>
-          <div class="prod-card-foot">
-            <a href="producto.html" class="btn btn-ghost">Ver ficha</a>
-            <a href="cotizar.html?producto=Disco%20de%20corte%204½%20pulg&sku=DISCO-115-1.0" class="btn btn-amber">Cotizar</a>
-          </div>
-        </div>
-      </article>
+<!-- MARCAS -->
+<section class="section">
+  <div class="container">
+    <div class="section-head center"><span class="kicker">Distribuimos</span><h2>Marcas globales reconocidas</h2></div>
+    <div class="brands">
+      <div class="brand-chip">DeWalt</div>
+      <div class="brand-chip">Nitto Kohki</div>
+      <div class="brand-chip">Drill America</div>
+      <div class="brand-chip">Hougen</div>
+      <div class="brand-chip">Accu-Lube</div>
+      <div class="brand-chip">Würth</div>
+    </div>
+  </div>
+</section>
 
+<!-- FAQ -->
+<section class="section alt" id="faq">
+  <div class="container">
+    <div class="section-head center"><span class="kicker">Preguntas Frecuentes</span><h2>Resolvemos tus dudas</h2></div>
+    <div class="pb-faq">
+      <details><summary>¿Venden al detal o solo al por mayor?</summary><p>Atendemos tanto requerimientos específicos y repuestos al detal como órdenes masivas por volumen. Contáctanos para ofrecerte la escala de precios adecuada.</p></details>
+      <details><summary>¿Hacen entregas en todo Panamá?</summary><p>Sí, contamos con un sistema de logística y distribución con cobertura de entrega a nivel nacional, asegurando que tus insumos lleguen de forma segura hasta tus instalaciones o zona de proyecto.</p></details>
+      <details><summary>¿Cómo gestionan los envíos internacionales?</summary><p>Aprovechamos las ventajas logísticas de Panamá para realizar despachos internacionales rápidos. Coordinamos la documentación de exportación y el flete correspondiente para que recibas tus componentes de manera eficiente.</p></details>
+      <details><summary>¿Los productos cuentan con garantía técnica?</summary><p>Absolutamente. Todos los equipos, herramientas e insumos distribuidos por Consultores PB provienen de fabricantes certificados y marcas líderes reconocidas en el sector metalmecánico y de construcción.</p></details>
+      <details><summary>¿Cuáles son los métodos de pago aceptados?</summary><p>Aceptamos transferencias bancarias directas (ACH), depósitos y métodos de pago digitalizados rápidos. Los detalles específicos se adjuntan formalmente en cada cotización enviada.</p></details>
     </div>
   </div>
 </section>
@@ -194,8 +236,8 @@
 <section class="cta-band">
   <div class="container">
     <div>
-      <h2>¿No encuentras un producto o necesitas asesoría técnica?</h2>
-      <p>Cuéntanos qué necesitas y te armamos una cotización a la medida.</p>
+      <h2>¿Listo para optimizar tus costos de operación?</h2>
+      <p>Cuéntanos qué necesitas y te armamos una cotización de volumen a la medida.</p>
     </div>
     <div class="btns">
       <a href="cotizar.html" class="btn btn-amber btn-lg">Solicitar cotización</a>
@@ -204,62 +246,59 @@
   </div>
 </section>
 
-<!-- MARCAS  👉 EDITAR: nombres de las marcas que distribuyen -->
-<section class="section">
-  <div class="container">
-    <div class="section-head center"><span class="kicker">Trabajamos con</span><h2>Marcas que distribuimos</h2></div>
-    <div class="brands">
-      <div class="brand-chip">DeWalt</div>
-      <div class="brand-chip">Hougen</div>
-      <div class="brand-chip">Bosch</div>
-      <div class="brand-chip">Makita</div>
-      <div class="brand-chip">Norton</div>
-      <div class="brand-chip">Milwaukee</div>
-    </div>
-  </div>
-</section>
-
-<!-- ════════════════════════════════════════════════════════════
-     FOOTER (se repite igual en todas las páginas)
-     ════════════════════════════════════════════════════════════ -->
+<!-- FOOTER -->
 <footer class="footer">
   <div class="container">
     <div class="footer-top">
       <div>
-        <a href="index.html" class="brand"><img src="assets/logo.png" alt="Consultores PB"><div class="brand-txt"><strong>Consultores PB</strong><span>Soluciones Industriales</span></div></a>
-        <p class="footer-intro">Distribuidor de herramientas y equipos industriales en Panamá. Calidad y eficiencia que tu trabajo requiere.</p>
+        <a href="index.html" class="brand"><img src="assets/logo.png" alt="Consultores PB"><div class="brand-txt"><strong>Consultores PB</strong><span>Suministro Industrial B2B</span></div></a>
+        <p class="footer-intro">Tu aliado estratégico en suministro e importación industrial. El canal directo entre las fábricas líderes a nivel global y las operaciones que mueven al mundo.</p>
         <div class="footer-social">
           <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
           <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
-          <a href="https://wa.me/50769212056" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.6.1-1.5-.7-2.4-1.3-3.4-3-.3-.5.3-.4.8-1.4.1-.2 0-.3 0-.5-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.8.8-1 1.9-.7 3.2.4 1.5 1.4 2.8 1.5 3 .2.2 2.7 4.1 6.5 5.6 2.4.9 3 .8 3.6.7.7-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.2-.3-.2-.6-.3z"/></svg></a>
+          <a href="https://wa.me/50769212056" target="_blank" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.6.1-1.5-.7-2.4-1.3-3.4-3-.3-.5.3-.4.8-1.4.1-.2 0-.3 0-.5-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.8.8-1 1.9-.7 3.2.4 1.5 1.4 2.8 1.5 3 .2.2 2.7 4.1 6.5 5.6 2.4.9 3 .8 3.6.7.7-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.2-.3-.2-.6-.3z"/><path d="M12 2A10 10 0 002 12a10 10 0 001.5 5.2L2 22l4.9-1.3A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2z"/></svg></a>
         </div>
       </div>
       <div class="footer-col">
-        <h4>Catálogo</h4>
-        <ul><li><a href="categoria.html">Amoladoras</a></li><li><a href="categoria.html">Fresas de carburo</a></li><li><a href="categoria.html">Brocas anulares</a></li><li><a href="categoria.html">Discos de corte</a></li><li><a href="categoria.html">Taladros magnéticos</a></li><li><a href="categoria.html">Polipastos</a></li></ul>
+        <h4>Catálogo de Productos</h4>
+        <ul>
+          <li><a href="categoria.html?cat=consumibles">Consumibles e Insumos Industriales</a></li>
+          <li><a href="categoria.html?cat=corte">Herramientas de Corte y Mecanizado</a></li>
+          <li><a href="categoria.html?cat=electricas">Equipos y Herramientas Eléctricas</a></li>
+          <li><a href="categoria.html?cat=estructurales">Soluciones Estructurales y Fluidos</a></li>
+        </ul>
       </div>
       <div class="footer-col">
-        <h4>Empresa</h4>
-        <ul><li><a href="#">Nosotros</a></li><li><a href="#">Asesoría técnica</a></li><li><a href="cotizar.html">Solicitar cotización</a></li><li><a href="#">Preguntas frecuentes</a></li></ul>
+        <h4>Empresa y Soporte</h4>
+        <ul>
+          <li><a href="index.html#nosotros">Nosotros</a></li>
+          <li><a href="index.html#como-comprar">¿Cómo comprar?</a></li>
+          <li><a href="index.html#requerimientos">Requerimientos Especiales</a></li>
+          <li><a href="cotizar.html">Solicitar Cotización</a></li>
+          <li><a href="index.html#faq">Preguntas Frecuentes</a></li>
+        </ul>
       </div>
       <div class="footer-col">
-        <h4>Contacto</h4>
+        <h4>Contacto y Logística</h4>
         <ul class="footer-contact">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>+507 398-6559</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>info@consultorespb.com</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Ciudad de Panamá, Panamá</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg><span>Central / Ventas<br><a href="tel:+5073986559">+507 398-6559</a></span></li>
+          <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.6.1-1.5-.7-2.4-1.3-3.4-3-.3-.5.3-.4.8-1.4.1-.2 0-.3 0-.5-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.8.8-1 1.9-.7 3.2.4 1.5 1.4 2.8 1.5 3 .2.2 2.7 4.1 6.5 5.6 2.4.9 3 .8 3.6.7.7-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.2-.3-.2-.6-.3z"/></svg><span>WhatsApp Ventas<br><a href="https://wa.me/50769212056" target="_blank">+507 6921-2056</a></span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span>Correo Corporativo<br><a href="mailto:info@consultorespb.com">info@consultorespb.com</a></span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span>Correo Alterno<br><a href="mailto:consultorespb07@gmail.com">consultorespb07@gmail.com</a></span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Ubicación<br>Ciudad de Panamá, Panamá</span></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <span>© 2026 Consultores PB. Todos los derechos reservados.</span>
-      <span>Sitio informativo · Las cotizaciones se gestionan directamente.</span>
+      <span>Envíos nacionales e internacionales desde Panamá · DeWalt · Nitto Kohki · Drill America · Hougen · Accu-Lube · Würth</span>
     </div>
   </div>
 </footer>
 
 <a class="wa-fab" href="https://wa.me/50769212056" target="_blank" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.6.1-1.5-.7-2.4-1.3-3.4-3-.3-.5.3-.4.8-1.4.1-.2 0-.3 0-.5-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.8.8-1 1.9-.7 3.2.4 1.5 1.4 2.8 1.5 3 .2.2 2.7 4.1 6.5 5.6 2.4.9 3 .8 3.6.7.7-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.2-.3-.2-.6-.3z"/><path d="M12 2A10 10 0 002 12a10 10 0 001.5 5.2L2 22l4.9-1.3A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2z"/></svg></a>
 
+<script src="assets/datos.js"></script>
 <script src="assets/app.js"></script>
 </body>
 </html>
