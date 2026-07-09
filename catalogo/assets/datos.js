@@ -20,7 +20,7 @@ var PB_PRODS = [
   /* ── 1. CONSUMIBLES ────────────────────────────────────── */
   {
     sku: 'GRA-AM-S390', cat: 'consumibles', brand: 'Amasteel', destacado: true, tag: { t: 'Destacado', amber: true },
-    name: 'Granalla de Acero Steel Shot S-390 (Amasteel)',
+    name: 'Granalla de Acero Steel Shot',
     img: 'assets/productos/steel-shot-s390.jpg',
     disp: 'En stock (Bolsas / Pallets)',
     summary: 'Abrasivo premium de acero de alta durabilidad para la preparación óptima de superficies y remoción agresiva de óxido.',
