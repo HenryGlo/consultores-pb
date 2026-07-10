@@ -8,6 +8,7 @@
    ============================================================ */
 
 var PB_WA = '50769212056';
+var PB_IMGV = '?v=2'; // versión de imágenes (subir al reemplazar fotos para evitar caché)
 
 var PB_CATS = [
   { id: 'consumibles',   n: 'Consumibles e Insumos Industriales', d: 'Granalla, marcadores, discos y abrasivos', img: 'assets/productos/steel-shot-s390.jpg' },
@@ -63,7 +64,7 @@ var PB_PRODS = [
   {
     sku: 'WR-DF-FC115', cat: 'consumibles', brand: 'Würth',
     name: 'Discos de Corte y Desbaste Firecut – Würth',
-    img: 'assets/productos/discos-corte-wurth.png',
+    img: 'assets/productos/discos-corte-wurth.jpg',
     disp: 'En stock',
     summary: 'Discos abrasivos aglomerados de alto desempeño para cortes limpios y molienda segura en metales ferrosos y acero inoxidable.',
     specs: [
@@ -171,7 +172,7 @@ var PB_PRODS = [
   {
     sku: 'HER-FC-ROT', cat: 'corte', brand: 'Consultores PB',
     name: 'Fresas de Carburo de Tungsteno (Limas Rotativas)',
-    img: 'assets/productos/fresas-carburo.png',
+    img: 'assets/productos/fresas-carburo.jpg',
     disp: 'Tipos SB, SF, SC',
     summary: 'Limas rotativas de carburo sólido para motortools, diseñadas para la remoción rápida de material, desbaste de soldaduras y rebabeo estructural.',
     specs: [
@@ -337,7 +338,7 @@ function pbCard(p) {
   var specs = p.specs.slice(0, 2).map(function (s) { return '<li>' + s[1] + '</li>'; }).join('');
   var link = 'producto.html?sku=' + pbEnc(p.sku);
   return '<article class="prod-card">' +
-    '<div class="prod-card-img">' + tag + '<img src="' + p.img + '" alt="' + p.name + '" loading="lazy"></div>' +
+    '<div class="prod-card-img">' + tag + '<img src="' + p.img + PB_IMGV + '" alt="' + p.name + '" loading="lazy"></div>' +
     '<div class="prod-card-body">' +
       '<span class="prod-brand">' + p.brand + '</span>' +
       '<h3><a href="' + link + '">' + p.name + '</a></h3>' +
@@ -353,7 +354,7 @@ function pbCard(p) {
 /* Tarjeta de categoría */
 function pbCatCard(c) {
   return '<a href="categoria.html?cat=' + c.id + '" class="cat-card">' +
-    '<div class="cat-card-img"><img src="' + c.img + '" alt="' + c.n + '" loading="lazy"></div>' +
+    '<div class="cat-card-img"><img src="' + c.img + PB_IMGV + '" alt="' + c.n + '" loading="lazy"></div>' +
     '<div class="cat-card-body"><h3>' + c.n + '</h3><span>' + c.d + '</span>' +
     '<span class="go">Ver productos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span></div></a>';
 }
@@ -414,7 +415,7 @@ function pbRenderProducto() {
   var fichaBtn = p.ficha ? '<a href="assets/fichas/' + p.ficha + '" target="_blank" class="btn btn-navy btn-lg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg>Ficha técnica</a>' : '';
 
   host.innerHTML =
-    '<div class="gallery"><div class="main-img"><img src="' + p.img + '" alt="' + p.name + '"></div></div>' +
+    '<div class="gallery"><div class="main-img"><img src="' + p.img + PB_IMGV + '" alt="' + p.name + '"></div></div>' +
     '<div class="pd-info">' +
       '<span class="pd-brand">' + p.brand + '</span>' +
       '<h1 class="pd-title">' + p.name + '</h1>' +
