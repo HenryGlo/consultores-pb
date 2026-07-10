@@ -20,14 +20,14 @@ var PB_CATS = [
 var PB_PRODS = [
   /* ── 1. CONSUMIBLES ────────────────────────────────────── */
   {
-    sku: 'GRA-AM-S390', cat: 'consumibles', brand: 'Amasteel', destacado: true, tag: { t: 'Destacado', amber: true },
+    sku: 'GRA-AM', cat: 'consumibles', brand: 'Amasteel', destacado: true, tag: { t: 'Destacado', amber: true },
     name: 'Granalla de Acero Steel Shot',
     img: 'assets/productos/steel-shot-s390.jpg',
     disp: 'En stock (Bolsas / Pallets)',
     summary: 'Abrasivo premium de acero de alta durabilidad para la preparación óptima de superficies y remoción agresiva de óxido.',
     specs: [
       ['Marca', 'Amasteel (Ervin Industries)'],
-      ['Modelo / Tamaño', 'Steel Shot S-390'],
+      ['Modelo / Tamaño', 'Steel Shot'],
       ['Normativas', 'Clasificación exacta bajo normas internacionales SAE J444 y J827'],
       ['Presentación', 'Bolsas de 50 lbs dispuestas en pallets industriales de 35"x35"'],
       ['Capacidad de Despacho', 'Pallets de 2,000 lbs (1 Tonelada corta) para compras por volumen']
