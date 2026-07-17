@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Borradores de propuestas — no indexar
+Disallow: /proposal-2.html
+Disallow: /proposal-3.html
+
+Sitemap: https://grupoconsultorespb.com/sitemap.xml
