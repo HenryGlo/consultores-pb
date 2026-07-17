@@ -7,7 +7,7 @@
    arreglo PB_PRODS de abajo — no hace falta tocar el HTML.
    ============================================================ */
 
-var PB_WA = '50769212056';
+var PB_WA = '50763678521';
 var PB_IMGV = '?v=2'; // versión de imágenes (subir al reemplazar fotos para evitar caché)
 
 var PB_CATS = [

@@ -54,7 +54,7 @@ function pbTab(btn, id) {
 function pbSubmitQuote(e) {
   e.preventDefault();
   var f = e.target;
-  var wa = '50769212056'; // 👈 EDITAR: número de WhatsApp de Consultores PB
+  var wa = '50763678521'; // 👈 EDITAR: número de WhatsApp de Consultores PB
   var texto =
     '*Nueva solicitud de cotización — Consultores PB*%0A%0A' +
     '*Nombre:* ' + encodeURIComponent(f.nombre.value) + '%0A' +
